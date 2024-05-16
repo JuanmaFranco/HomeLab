@@ -56,16 +56,30 @@ To keep our domain structure well-organized, we will create Organizational Units
 
 ### Summary of Steps
 
-1. **Set up Hyper-V** on your host machine.
-2. **Create Virtual Machines**:
-    - Two server VMs: One for the Domain Controller and another for additional services.
-    - Four client VMs: These will simulate the end-user workstations.
-3. **Install the necessary operating systems** on all VMs (e.g., Windows Server for servers and Windows 10/11 for client machines).
-4. **Configure the Domain Controller**:
-    - Install Active Directory Domain Services (AD DS) on the first server.
-    - Promote it to a Domain Controller and create a new domain.
-5. **Join all client machines** to the domain.
-6. **Create Organizational Units (OUs)** in Active Directory for each department.
+| Step | Description |
+|------|-------------|
+| **1. Set up Hyper-V on your host machine** |   |
+|     1.1 | **Install Hyper-V**: Open the Control Panel, navigate to Programs > Programs and Features > Turn Windows features on or off, check the box for Hyper-V, click OK, and restart your computer. <br/><br/> ![Hyper-V](images/hyper-v.PNG) |
+|     1.2 | **Configure Hyper-V**: Open Hyper-V Manager from the Start menu, select your host machine, and configure virtual switches by going to Virtual Switch Manager in the right-hand Actions menu. Create a new External virtual switch to allow VMs to access your physical network. <br/><br/> ![External Virtual Switch](images/external-virtual-switch.PNG)|
+| **2. Create Virtual Machines** |   |
+|     2.1 | **Create the Domain Controller VM**: In Hyper-V Manager, click New > Virtual Machine, and follow the wizard to set up the VM with appropriate settings such as name, generation, memory, network, and virtual hard disk. Install an operating system later. <br/> In my case, I'm going to choose to change the default path to store the virtual machine, as it seems more organized to me. In this case, I'll opt to place it in C:\Hyper-V\VMs\\. <br/><br/> ![DC01-1](/images/dc01-1.PNG) <br/><br/> Afterwards, I select Generation 1, as Generation 2 can be prone to errors. <br/><br/> ![DC01-2](/images/dc01-2.PNG) <br/><br/> Now, I need to allocate the RAM to the virtual machine. In this case, I'll opt for the minimum recommended for Windows Server 2022 with Desktop Experience, which is 4GB (4096 MB). <br/> Additionally, I'll choose to leave the **'Use dynamic memory for this virtual machine'** checkbox checked. <br> When a virtual machine uses dynamic memory, it means that its memory allocation can adjust automatically based on the demand from the operating system and applications running within the virtual machine. Instead of assigning a fixed amount of memory, the virtual machine can request and release memory as needed, allowing for more efficient utilization of host resources. <br/><br/> ![DC01-3](/images/dc01-3.PNG) <br/><br/> Then, I select the network adapter to which the virtual machine will connect. In this case, it's the network adapter created in step 1.2 (WAN), which is associated with my Qualcomm Atheros QCA9377 wireless network card. <br/><br/> ![DC01-4](/images/dc01-4.PNG) <br/><br/> Next, I will create a virtual hard disk of 2TB (2048GB), which will be more than enough for any practice you may want to perform. <br/><br/> ![DC01-5](/images/dc01-5.PNG) <br/><br/> Finally, I select the option 'Install an operating system from a bootable CD/DVD-ROM' and locate the location of the .ISO file containing the Windows Server 2022 Operating System. <br/><br/> ![DC01-6](/images/dc01-6.PNG) <br/><br/> Once this is done, the virtual machine is successfully created. Now, all that's left is to connect to it, start it up, and follow the Windows Server installer. <br/><br/> ![DC01-7](/images/dc01-7.PNG) <br/><br/> |
+|     2.2 | **Create the Second Server VM**: Follow the same steps as above but name this VM Server2. <br/><br/> Next, I create the second virtual machine, which will also have Windows Server 2022 as its operating system. I will avoid detailing the installation as it is the same as the DC01 virtual machine, only the name is different. <br/> In this case, the virtual machine will be named 'SV02'. <br/><br/> ![SV02](/images/sv02.PNG) <br/><br/> Then, once all the fields are filled out, I have the 2 server machines created. <br/><br/> ![SV03](/images/sv02-2.PNG) <br/><br/> |
+|     2.3 | **Create the Client VMs**: Repeat the VM creation process four times for client machines, naming them JMFSOFT-PC01, JMFSOFT-PC02, JMFSOFT-PC03, and JMFSOFT-PC04. Assign at least 1024 MB of memory to each client VM. <br/><br/> Now, I repeat the process but instead of using the Windows Server 2022 .iso file as the boot disk, I choose the Windows 10 .iso file. <br/><br/> ![Client1](/images/client1.PNG) <br/><br/> ![Client1-2](/images/client1-2.PNG) <br/><br/> Then, once the 2 servers (Windows Server 2022) and the four client machines (Windows 10) are created, I have the following: ![Client1-3](/images/client1-3.PNG)|
+| **3. Install the necessary operating systems on all VMs** |   |
+|     3.1 | **Prepare installation media**: Obtain ISO files for Windows Server (for the servers) and Windows 10/11 (for the client machines). <br/><br/> In this case, I chose to download both .iso files (Windows Server 2022 and Windows 10) beforehand, but you can also choose the option 'Install an operating system later,' which creates the virtual machine and waits for you to attach the desired .iso file later. If you prefer to do it that way, you can download the .iso files from the official Microsoft website. <br/><br/> -  [Windows Server 2022](https://www.microsoft.com/es-ES/evalcenter/evaluate-windows-server-2022)<br/><br/> -  [Windows 10](https://www.microsoft.com/es-es/software-download/windows10) |
+|     3.2 | Install Windows Server on DC1 and Server2: Start the VM, connect to it, attach the Windows Server ISO, and follow the installation prompts to install Windows Server. Configure the server with appropriate settings (e.g., server name, IP address). |
+|     3.3 | Install Windows 10/11 on client VMs: Start each client VM, connect to it, attach the Windows 10/11 ISO, and follow the installation prompts to install Windows. Configure each client with appropriate settings (e.g., machine name, IP address). |
+| **4. Configure the Domain Controller** |   |
+|     4.1 | Install Active Directory Domain Services (AD DS): Log in to DC1, open Server Manager, click Add roles and features, select Active Directory Domain Services, and complete the installation. |
+|     4.2 | Promote DC1 to a Domain Controller: After installation, click on the notification flag in Server Manager, select Promote this server to a domain controller, choose Add a new forest, enter a root domain name (e.g., jmsoft.local), and complete the wizard. Restart the server as prompted. |
+| **5. Join all client machines to the domain** |   |
+|     5.1 | Configure network settings: Ensure that all client machines and the second server can resolve the domain by setting the DNS server to the IP address of DC1. |
+|     5.2 | Join each client to the domain: On each client machine, open System Properties (right-click on This PC > Properties > Advanced system settings), click on Change next to To rename this computer or change its domain or workgroup, select Domain, enter the domain name (e.g., jmsoft.local), provide the credentials of a domain user, and restart each client machine after joining the domain. |
+| **6. Create Organizational Units (OUs) in Active Directory for each department** |   |
+|     6.1 | Open Active Directory Users and Computers (ADUC) on DC1: Go to Server Manager > Tools > Active Directory Users and Computers. |
+|     6.2 | Create OUs: Right-click on the domain (e.g., jmsoft.local) and select New > Organizational Unit. Create OUs for each department (e.g., IT, Finance, Sales, HR, Marketing, Development, Customer Service, Design, Administration). |
+|     6.3 | Move user accounts to OUs: After creating user accounts, move each account to the appropriate OU by right-clicking on the user, selecting Move, and choosing the appropriate OU. |
+
 
 ## User and Group Creation
 
@@ -187,7 +201,7 @@ Although we are creating only four virtual machines to simulate end-user worksta
     - **Department:** IT
     - **Location:** Chicago
 
-15. **Lara Vega <3**
+15. **Lara Vega**
     - **Username:** laravega
     - **Occupation:** Graphic Designer
     - **Email:** laravega@jmfsoft.com
