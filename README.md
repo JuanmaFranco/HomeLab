@@ -78,7 +78,7 @@ To keep our domain structure well-organized, we will create Organizational Units
 | **6. Create Organizational Units (OUs) in Active Directory for each department** |   |
 |     6.1 | **Open Active Directory Users and Computers (ADUC) on DC1**: Go to Server Manager > Tools > Active Directory Users and Computers. |
 |     6.2 | **Create OUs**: Right-click on the domain (e.g., jmsoft.local) and select New > Organizational Unit. Create OUs for each department (e.g., IT, Finance, Sales, HR, Marketing, Development, Customer Service, Design, Administration). |
-|     6.3 | Move user accounts to OUs: After creating user accounts, move each account to the appropriate OU by right-clicking on the user, selecting Move, and choosing the appropriate OU. |
+|     6.3 | **Move user accounts to OUs**: After creating user accounts, move each account to the appropriate OU by right-clicking on the user, selecting Move, and choosing the appropriate OU. |
 
 
 ## User and Group Creation
