@@ -249,9 +249,24 @@ Although we are creating only four virtual machines to simulate end-user worksta
     - **Department:** Administration
     - **Location:** Los Angeles
 
-<br/><br/>
+Given the list of users, I will proceed to create 10 users with ADAC and 10 users with ADUC to practice both 'programs'. Accidental deletion protection will be activated in all cases. <br/><br/>
+To simulate a 'real' work environment, I'm going to create a ticket in Jira Service Management (JSM) representing a hypothetical request for user creation. <br/><br/>
 
-Given the list of users, I will proceed to create 10 users with ADAC and 10 users with ADUC to practice both 'programs'. Accidental deletion protection will be activated in all cases.
+![Jira](/images/jsm1.PNG)
+
+In this case, I have already created a JSM (Jira Service Management) project previously. Now, I will create the ticket that simulates the experience of receiving it, 'working on it', and resolving it.
+
+![Ticket](/images/ticket.PNG)
+
+After simulating the ticket sent by Carlos Pérez (a user created by myself), I assign it to myself (indicating that I will handle the ticket) and start creating the users.
+
+Finally, once the ticket is resolved (with all the users created), I get the following: 
+
+![Users](/images/users.PNG)
+
+Therefore, once I have created all the requested users, I can mark the ticket as resolved and additionally leave a message for the user who initiated it, indicating that all the users have been successfully created. 
+
+![Ticket2](/images/ticket2.PNG)
 
 ## Password Reset
 Content for password reset...
