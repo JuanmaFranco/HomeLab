@@ -268,5 +268,48 @@ Therefore, once I have created all the requested users, I can mark the ticket as
 
 ![Ticket2](/images/ticket2.PNG)
 
+### User creation through Azure Active Directory (currently Microsoft Entra ID)
+
+In addition to managing Active Directory on-premises, you can use the cloud version, which is Azure Active Directory, currently known as Microsoft Entra ID.
+
+![Azure1](/images/azure1.PNG)
+
+To do this, I must first have my domain created (in this case, I created the domain jmfsoft.onmicrosoft.com).
+
+To create users, I go to the Users section and select New User -> Create New User:
+
+![Azure2](/images/azure2.PNG)
+![Azure3](/images/azure3.PNG)
+
+Then, I fill in the desired fields.
+
+![Azure4](/images/azure4.PNG)
+
+![Azure5](/images/azure5.PNG)
+
+Finally, I check that all the fields have been filled in correctly:
+
+![Azure6](/images/azure6.PNG)
+
+If everything is correct, I press 'Create' to finish creating the user:
+
+![Azure7](/images/azure7.PNG)
+
+### Bulk user creation with Azure Active Directory using a .csv file
+
+To create multiple users at once, Azure Active Directory has a section that allows you to create multiple users based on an uploaded .csv file.
+
+To do this, I go to Bulk operations -> Bulk Creation and download the corresponding .csv.
+
+![Azure8](/images/azure8.png)
+
+![Azure9](/images/azure9.PNG)
+
+Once the .csv is downloaded, I fill in each column with the corresponding data, where each row will correspond to a particular user.
+
+Once all users are created, I get the following:
+
+![Azure11](/images/azure11.PNG)
+
 ## Password Reset
 Content for password reset...
