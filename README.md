@@ -256,7 +256,10 @@ To simulate a 'real' work environment, I'm going to create a ticket in Jira Serv
 
 In this case, I have already created a JSM (Jira Service Management) project previously. Now, I will create the ticket that simulates the experience of receiving it, 'working on it', and resolving it.
 
-![Ticket](/images/ticket.PNG)
+![Ticket](/images/ticket.PNG) 
+<br/> ..... 
+<br/> ..... <br/>
+![Ticket00](/images/ticket00.PNG)
 
 After simulating the ticket sent by Carlos Pérez (a user created by myself), I assign it to myself (indicating that I will handle the ticket) and start creating the users.
 
@@ -312,4 +315,67 @@ Once all users are created, I get the following:
 ![Azure11](/images/azure11.PNG)
 
 ## Password Reset
-Content for password reset...
+
+Now, to continue with the homelab, I will practice another fundamental skill, which is resetting user passwords. Again, I will create a ticket from the same person to simulate a real environment.
+
+Once the ticket is created and the request is submitted, I log in as 'IT Support' and view the ticket in question:
+
+![Ticket-Reset](/images/ticket-reset.PNG)
+
+To do this, I go to **Active Directory Users and Computers (ADUC)** or **Active Directory Administration Center (ADAC)**, and locate the user.
+
+### Reset password on Active Directory Users and Computers (ADUC)
+
+In this case, the search can be done through the organizational units (as marked with 1, which gave me the results of the design department) or through the search function, useful when we have many users (as marked with 2):
+
+![Ticket-Reset2](/images/ticket-reset2.png)
+
+Once I have located the user, I right click on it and 'Reset password':
+
+![Ticket-Reset3](/images/ticket-reset3.png)
+
+Now, I must enter a temporary password that will be given to the user to try to log in next time.
+
+It is important to check the box that indicates that the user will have to change the password at the next login, this is a good practice and its use is recommended.
+
+Finally, it gives us the possibility to unblock the user, although in this case the user did not actually block the account.
+
+![Ticket-Reset4](/images/ticket-reset4.png)
+
+Once this is done, I get a confirmation message:
+
+![Ticket-Reset5](/images/ticket-reset5.png)
+
+### Reset password on Active Directory Administrative Center (ADAC)
+
+Resetting a password in the Active Directory Administrative Center is just as easy, in addition to the fact that it has a more user-friendly interface.
+
+Once ADAC is open, we can locate a section where we can easily reset a user's password:
+
+![Ticket-Reset6](/images/ticket-reset6.png)
+
+If I do not opt for this method, I can simply move around the domain until I locate the corresponding organizational unit (OU) and then locate the user:
+
+![Ticket-Reset7](/images/ticket-reset7.png)
+
+Now, once I have located the user, I can choose to right click on it and select 'Reset password' (1) or simply use the right sidebar (2) which also has this option:
+
+![Ticket-Reset8](/images/ticket-reset8.png)
+
+Again, I fill in the field with the temporary password and select the option for the user to change it at the next login:
+
+![Ticket-Reset9](/images/ticket-reset9.png)
+
+Done! Once this is completed, the user must log in with the temporary password and then will be prompted to update it. 
+
+### Reset password on Azure Active Directory
+
+To reset a password in Azure Active Directory, I go to the users section.
+
+![Ticket-Reset10](/images/ticket-reset10.png)
+
+Then, I select the user to reset the password.
+
+In this case, as the ticket indicated, the user is “Lara Vega”:
+
+![Ticket-Reset11](/images/ticket-reset11.png)
