@@ -379,3 +379,11 @@ Then, I select the user to reset the password.
 In this case, as the ticket indicated, the user is “Lara Vega”:
 
 ![Ticket-Reset11](/images/ticket-reset11.png)
+
+Once in the user's profile, all you need to do is click on “Reset password” at the top and a sidebar will open:
+
+![Ticket-Reset14](/images/ticket-reset14.png)
+
+![Ticket-Reset12](/images/ticket-reset12.png)
+
+![Ticket-Reset13](/images/ticket-reset13.png)
