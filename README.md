@@ -81,6 +81,7 @@ To keep our domain structure well-organized, we will create Organizational Units
 |     6.2 | **Create OUs**: Right-click on the domain (e.g., jmsoft.local) and select New > Organizational Unit. Create OUs for each department (e.g., IT, Finance, Sales, HR, Marketing, Development, Customer Service, Design, Administration). <br/><br/> To create organizational units (OUs), I have two options: do it from Active Directory Users and Computers (ADUC) or from Active Directory Administrative Center (ADAC): <br/><br/> **1 - Create from Active Directory Users and Computers (ADUC)**: To do this, I go to Server Manager, Tools, and select Active Directory Users and Computers. Then, once inside ADUC, I expand the domain (jmfsoft.local) and select where I want to create the organizational unit. <br/><br/> ![OU-1](/images/ou1.png) <br/><br/> It is important to note that organizational units (OUs) cannot be created within containers, nor can group policies (GP) be applied to them. In this case, I will create an organizational unit called 'Argentina' within the domain and then create within it all the OUs related to the departments of the company at the Argentina site (assuming it is a company with many locations): <br/><br/> ![OU-2](/images/ou2.png) <br/><br/> **2 - Create from Active Directory Administrative Center (ADAC)**: To do this, I go to Server Manager, Tools, and select Active Directory Administrative Center. Then, once inside, I select the location, right-click, New, and select 'Organizational Unit'. <br/><br/> ![ADAC-2](/images/adac2.png) <br/><br/> Then, I complete the creation of the company's organizational units (IT, HR, Finance, etc.). <br/><br/> ![ADAC-3](/images/adac3.PNG) <br/><br/> |
 |     6.3 | **Move user accounts to OUs**: After creating user accounts, move each account to the appropriate OU by right-clicking on the user, selecting Move, and choosing the appropriate OU. <br/><br/> Although user creation is part of the next section, I will create a test user and move it to a previously created organizational unit (in this case, IT) just to complete point 6.3 and finish with section 1 (Homelab Creation). <br/><br/> In this case, I will create the user named 'Prueba' in Customer Service and then move it to the IT Organizational Unit. <br/><br/> ![NewUser](/images/newuser.PNG) <br/><br/> Then, to move the user, I simply right-click on it and select 'Move...'. Now, I just need to choose which organizational unit (OU) to move it to. In this case, I will move it to IT: <br/><br/> ![NewUser2](/images/newuser2.PNG) <br/><br/> Once done, the user has been successfully moved from 'Customer Service' to 'IT'. <br/><br/> ![NewUser3](/images/newuser3.PNG) |
 
+-------------------------------------------------------------------------------------------------
 
 ## User and Group Creation
 
@@ -315,6 +316,8 @@ Once all users are created, I get the following:
 
 ![Azure11](/images/azure11.PNG)
 
+-------------------------------------------------------------------------------------------------
+
 ## Password Reset
 
 Now, to continue with the homelab, I will practice another fundamental skill, which is resetting user passwords. Again, I will create a ticket from the same person to simulate a real environment.
@@ -397,3 +400,6 @@ In this case, the temporary password is “Xavo6347”.
 
 ## Software Deployment
 
+In this step, I will perform software deployment, a task that saves a lot of time and effort. 
+
+In this case, I will do it from the secondary server (SV02) to balance the load and not overburden the domain controller (DC01).
