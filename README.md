@@ -400,6 +400,69 @@ In this case, the temporary password is “Xavo6347”.
 
 ## Software Deployment
 
-In this step, I will perform software deployment, a task that saves a lot of time and effort. 
+In this step, I will perform Software Deployment, a task that saves a lot of time and effort. 
 
 In this case, I will do it from the secondary server (SV02) to balance the load and not overburden the domain controller (DC01).
+
+To perform the software deployment, I will use the **PDQ Deploy** tool, which is quite simple and intuitive to use.
+
+This tool can be downloaded from the following website: [PDQ Deploy](https://www.pdq.com/pdq-deploy/)
+
+Now, I proceed to download and install it on the secondary server (SV02).
+
+To do this, I need to create an account, which will give me a free trial of the full program for 14 days, although the basic functionality (software deployment) can still be used after those 14 days:
+
+![PDQ](/images/pdq1.PNG)
+
+Once registered, I am redirected to the following page where I get the links to download PDQ Deploy & PDQ Inventory, along with their licenses (which last for 14 days).
+
+![PDQ2](/images/pdq2.PNG)
+
+After installing (as a server, since SV02 will be in charge of deploying to client machines), the program interface will look like this:
+
+![PDQ3](/images/pdq3.PNG)
+
+Now, to begin the deployment, first, I need to have the installer of the software I want to deploy downloaded and saved in a location.
+
+In this case, for simplicity, I'll choose to install 7zip.
+
+The installer will be located in a folder on the desktop named 'Software to Deploy':
+
+![PDQ4](/images/pdq4.PNG)
+
+Now, I open PDQ Deploy and select 'New Package'. Then, I fill in the fields.
+
+![PDQ5](/images/pdq5.PNG)
+![PDQ6](/images/pdq6.PNG)
+
+Afterwards, I go to 'Steps' and then select 'Install':
+
+![PDQ7](/images/pdq7.PNG)
+
+Then, I select the installer, add the parameters for silent installation (in this case, the appropriate one for 7zip is /S) to avoid disturbing any user while they are working, and press save.
+
+![PDQ8](/images/pdq8.PNG)
+
+Once this is done, the package will appear already created. Now, all that's left is to right-click on it and press 'Deploy Once' to begin the deployment.
+
+![PDQ9](/images/pdq9.png)
+
+Finally, I must select the users/computers by clicking on 'Choose Targets', and that's it, I can start the deployment:
+
+![PDQ10](/images/pdq10.PNG)
+
+In this case, just for testing purposes, I'll select client machines 1 and 2 (JMFSOFT-PC01 and JMFSOFT-PC02):
+
+![PDQ11](/images/pdq11.PNG)
+
+After initiating the deployment, I get the following results:
+
+![PDQ12](/images/pdq12.PNG)
+
+Now, I verify that 7zip was installed correctly on the client machines:
+
+![PDQ13](/images/pdq13.PNG)
+
+And, with this, I can successfully conclude the deployment.
+
+-------------------------------------------------------------------------------------------------
