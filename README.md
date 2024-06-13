@@ -12,6 +12,7 @@ Welcome to my personal project of creating a homelab utilizing Active Directory,
 2. [User and Group Creation](#user-and-group-creation)
 3. [Password Reset](#password-reset)
 4. [Software Deployment](#software-deployment)
+5. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -400,11 +401,17 @@ In this case, the temporary password is “Xavo6347”.
 
 ## Software Deployment
 
-In this step, I will perform Software Deployment, a task that saves a lot of time and effort. 
+In this section, I will use a software deployment program, **PDQ Deploy**, to simplify and automate the installation and updating of applications across multiple machines in my homelab. The reasons for implementing a software deployment tool like PDQ Deploy are:
+
+- **Efficiency and Time-Saving**: Manually installing or updating software on each client machine can be very time-consuming, especially in a larger environment. PDQ Deploy streamlines this process by allowing for the automated deployment of software packages across all connected devices, saving significant time and effort.
+
+- **Consistency and Control**: Using PDQ Deploy ensures that all machines receive the same software version and configuration, reducing the risk of discrepancies and compatibility issues. This helps maintain a uniform and controlled IT environment.
+
+- **Centralized Management**: PDQ Deploy provides a centralized interface to manage software installations, making it easier to track deployment status, manage software versions, and perform updates from a single point of control.
+
+- **Scalability**: As my homelab grows, manually handling software installations becomes increasingly impractical. PDQ Deploy scales with the environment, allowing for efficient software management regardless of the number of machines involved.
 
 In this case, I will do it from the secondary server (SV02) to balance the load and not overburden the domain controller (DC01).
-
-To perform the software deployment, I will use the **PDQ Deploy** tool, which is quite simple and intuitive to use.
 
 This tool can be downloaded from the following website: [PDQ Deploy](https://www.pdq.com/pdq-deploy/)
 
@@ -466,3 +473,16 @@ Now, I verify that 7zip was installed correctly on the client machines:
 And, with this, I can successfully conclude the deployment.
 
 -------------------------------------------------------------------------------------------------
+
+## Monitoring and Visualization
+
+In this section, I will install and integrate two programs, **Zabbix and Grafana**, to monitor client machines. This setup will enable real-time tracking and management of system performance and network activity. The primary reasons for including Zabbix, a robust monitoring tool, and Grafana, a powerful real-time data visualization program, in my homelab are:
+
+- **Proactive Issue Detection**: Zabbix will help in identifying and addressing potential issues, such as hardware failures, software crashes, or network disruptions, before they impact the system's functionality. Grafana will provide a clear, visual representation of these issues, making them easier to understand and act upon.
+
+- **Performance Optimization**: Continuous monitoring with Zabbix and real-time data analysis through Grafana will allow for fine-tuning system performance and ensuring efficient resource utilization.
+
+- **Security Enhancement**: By using Zabbix to keep a close watch on system activities and Grafana to visualize security metrics, I can quickly detect any unauthorized access or unusual behavior, thereby strengthening the security of the environment.
+
+- **Learning and Experimentation**: Implementing Zabbix and Grafana will provide hands-on experience in setting up, configuring, and utilizing monitoring and data visualization technologies, which are critical skills for IT management and cybersecurity.
+
