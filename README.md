@@ -486,3 +486,9 @@ In this section, I will install and integrate two programs, **Zabbix and Grafana
 
 - **Learning and Experimentation**: Implementing Zabbix and Grafana will provide hands-on experience in setting up, configuring, and utilizing monitoring and data visualization technologies, which are critical skills for IT management and cybersecurity.
 
+![Zabbix Logo](/images/zabbix-logo.png)
+![Grafana Logo](/images/grafana-logo.jpg)
+
+I will proceed to install both tools on the secondary server (SV02) because it's generally advisable to keep monitoring and visualization tasks separate from the domain controller (DC01) to avoid overloading the primary domain controller and to ensure better performance and security. By using SV02 for these tasks, we can offload the workload from the DC01 and maintain a more organized and manageable server environment.
+
+To start the installation, I go to the Zabbix website: [Zabbix](https://www.zabbix.com/), download it, and run the installer.
