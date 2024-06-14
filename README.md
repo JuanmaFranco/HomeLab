@@ -652,4 +652,59 @@ In this command, the file "/usr/share/zabbix-sql-scripts/mysql/server.sql.gz" is
 
 ![Zabbix 13](/images/zbx13.PNG)
 
-Executing the command "SET GLOBAL log_bin_trust_function_creators = 0;" sets the parameter to 0. This parameter controls whether non-superuser accounts can create user-defined functions when binary replication (log_bin) is enabled. Setting it to 0 restricts this capability, ensuring tighter control over the functions created in the database.
+Executing the command "**SET GLOBAL log_bin_trust_function_creators = 0;**" sets the parameter to 0. This parameter controls whether non-superuser accounts can create user-defined functions when binary replication (log_bin) is enabled. Setting it to 0 restricts this capability, ensuring tighter control over the functions created in the database.
+
+After performing these steps, it is necessary to configure the database for the Zabbix server:
+
+![Zabbix 14](/images/zbx14.PNG)
+
+![Zabbix 15](/images/zbx15.PNG)
+
+Now that everything is configured, I need to restart the 'zabbix-server', 'zabbix-agent', and 'apache2' services using **systemctl restart**. Additionally, I will enable them to start automatically at system boot using **systemctl enable**.
+
+![Zabbix 16](/images/zbx16.PNG)
+
+![Zabbix 17](/images/zbx17.PNG)
+
+Once the services are restarted and enabled, I proceed to open the Zabbix web interface (Zabbix UI) by accessing the link http://[host]/zabbix.
+In this case, the hostname is: deb-mon01, but if I don't know it, I can run the command 'hostname'.
+
+![Zabbix 18](/images/zbx18.PNG)
+
+![Zabbix 19](/images/zbx19.PNG)
+
+![Zabbix 20](/images/zbx20.PNG)
+
+Once the language is selected, I click 'Next Step' and verify that all prerequisites are met (in this case, as shown in the image, all are satisfactorily met):
+
+![Zabbix 21](/images/zbx21.PNG)
+
+Now, I configure the database connection.
+In this case, I just need to verify that the username is correct (zabbix), and I must fill in the password with the one used previously (Test.123):
+
+![Zabbix 22](/images/zbx22.PNG)
+
+Now, I need to fill in the Zabbix web server name, set the time zone, and choose the web interface theme. In this case, I opted for the name "Zabbix Server - Buenos Aires Office" to identify the Zabbix server. It's a clear and descriptive name indicating the purpose and location of the server.
+
+The time zone is (UTC-03:00) America/Argentina/Buenos Aires, and the chosen theme is 'Blue'.
+
+![Zabbix 23](/images/zbx23.PNG)
+
+Finally, a summary of the selected configurations is displayed. I verify that everything is correct and then click 'Next Step'.
+
+![Zabbix 24](/images/zbx24.PNG)
+
+Then, a message appears indicating that the Zabbix server has been successfully configured and installed.
+
+![Zabbix 25](/images/zbx25.PNG)
+
+Once 'Finish' is pressed, I am redirected to a login where I must enter the following credentials:
+
+**Username**: Admin <br/>
+**Password**: zabbix
+
+![Zabbix 26](/images/zbx26.PNG)
+
+Once this is done, I conclude with the configuration and installation of the Zabbix server. Now, the only thing left is to install the client on the machines I want to monitor or discover them automatically on the network.
+
+![Zabbix 27](/images/zbx27.PNG)
