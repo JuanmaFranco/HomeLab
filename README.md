@@ -585,3 +585,71 @@ Once this is done (logged in), I am already using the Debian operating system.
 ![Linux 18](/images/lnx18.PNG)
 
 Following this, I must install Zabbix and Grafana to begin monitoring the company's equipment.
+
+To begin the installation of Zabbix, I go to their official website --> [https://www.zabbix.com/download](https://www.zabbix.com/download) and select the following options:
+
+![Zabbix 1](/images/zbx1.PNG)
+
+**ZABBIX VERSION**: 6.4, the latest stable version <br/>
+**OS DISTRIBUTION**: Debian <br/>
+**OS VERSION**: 12 (Bookworm) <br/>
+**ZABBIX COMPONENT**: Server, Frontend, Agent (since I want to install the Zabbix server on this machine to monitor other client devices) <br/>
+**DATABASE**: MySQL (in this case, I choose MySQL because its configuration and management are simpler. I don't need to handle a large volume of data writes and I prioritize performance for read queries. However, in an enterprise environment, PostgreSQL might be more useful if complex transaction processing is needed) <br/>
+**WEB SERVER**: Apache (I choose Apache because it has native compatibility with Zabbix, is easier to configure, and I don't require handling many concurrent connections. This doesn’t justify installing Nginx, which excels at efficient management of concurrent connections and scalability) <br/>
+
+Once all these options are selected, I need to follow the installation manual on the website, which is tailored to the previously chosen options. <br/>
+To run the following commands, you need to open a terminal, which allows you to interact with the operating system using text-based commands.
+
+![Zabbix 2](/images/zbx2.PNG)
+
+The first command (**wget**) downloads the Zabbix 6.4 .deb package, which is then installed with the next command (**dpkg -i**). <br/>
+Finally, **apt update** is run, which updates the list of available packages and their versions from the configured repositories. This ensures that the system has the most up-to-date information about the packages available for installation or upgrade.
+
+![Zabbix 3](/images/zbx3.PNG)
+
+![Zabbix 4](/images/zbx4.PNG)
+
+![Zabbix 5](/images/zbx5.PNG)
+
+Once these commands are executed, we proceed to install the Zabbix server, frontend, and agent:
+
+![Zabbix 6](/images/zbx6.PNG)
+
+After executing the command, I will be prompted to confirm the installation of the listed packages. To confirm, type 'y' (for yes) and press enter. Alternatively, I could skip this prompt by adding the -y parameter to the original command.
+
+![Zabbix 7](/images/zbx7.PNG)
+
+Once this is done, I proceed to create the initial database in MySQL:
+
+![Zabbix 8](/images/zbx8.PNG)
+
+In this case, Debian 12.5 uses MariaDB (a MySQL fork compatible with most applications that use MySQL) instead of MySQL.
+Because of this, I will use the equivalent commands for the MariaDB database.
+
+![Zabbix 9](/images/zbx9.PNG)
+
+The commands executed in the image perform the following actions:
+
+- **sudo mariadb -u root -p**: This command initiates an interactive session with the MariaDB database server as the root user. The -p parameter prompts for the password of the root user to authenticate.
+
+- **create database zabbix character set utf8mb4 collate utf8mb4_bin;**: Creates a new database named zabbix on the MariaDB server. utf8mb4 specifies the UTF-8 character set for full Unicode support, capable of storing a wide range of characters. utf8mb4_bin specifies the binary collation setting, which is useful for binary string comparison without regard to specific regional settings.
+
+- **create user 'zabbix'@'localhost' identified by 'Test.123';** Creates a new user in the MariaDB database named zabbix, restricted to connections from the same server (localhost). The password for this user is set to 'Test.123'.
+
+- **grant all privileges on zabbix.\* to 'zabbix'@'localhost';**: Grants all privileges on the zabbix database to the zabbix user when connecting from localhost. This allows the zabbix user to perform all operations (create, modify, delete, select, etc.) on all tables and objects within the zabbix database.
+  
+- **set global log_bin_trust_function_creators = 1;**: Enables the safe execution of user-defined functions (UDF) in a binary log replication environment. This is necessary to allow Zabbix, which often uses user-defined functions, to function correctly in database replication environments.
+
+![Zabbix 10](/images/zbx10.PNG)
+
+![Zabbix 11](/images/zbx11.PNG)
+
+The command "**zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | sudo mariadb -u zabbix -p zabbix --default-character-set=utf8mb4**" is used to import a gzip-compressed database file into MariaDB, specifically for the Zabbix monitoring system.
+
+In this command, the file "/usr/share/zabbix-sql-scripts/mysql/server.sql.gz" is decompressed using zcat and then imported into MariaDB. The command is prefixed with "sudo" to execute it with superuser privileges, ensuring sufficient permissions to perform the import. "-u zabbix" specifies that the user "zabbix" will be used to connect to MariaDB, and "-p zabbix" indicates that the password for the user "zabbix" will be used. The option "--default-character-set=utf8mb4" ensures that UTF-8 character set encoding is used.
+
+![Zabbix 12](/images/zbx12.PNG)
+
+![Zabbix 13](/images/zbx13.PNG)
+
+Executing the command "SET GLOBAL log_bin_trust_function_creators = 0;" sets the parameter to 0. This parameter controls whether non-superuser accounts can create user-defined functions when binary replication (log_bin) is enabled. Setting it to 0 restricts this capability, ensuring tighter control over the functions created in the database.
