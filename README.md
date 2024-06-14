@@ -20,11 +20,12 @@ Welcome to my personal project of creating a homelab utilizing Active Directory,
 
 In this homelab setup, we will be using Hyper-V to create a virtualized environment. The primary components of this setup will include:
 
-![Company Equipment](images/company-equipment.png)
+![Equipment](images/equipment.png)
 
-1. **Two Servers**:
-    - One server will act as the **Domain Controller (DC)**, responsible for managing the Active Directory (AD) and handling authentication and authorization within the domain.
-    - The second server will be used for other purposes such as file storage, applications, or additional services required within the network.
+1. **Three Servers**:
+    - One server (Windows Server 2022) will act as the **Domain Controller (DC)**, responsible for managing the Active Directory (AD) and handling authentication and authorization within the domain.
+    - The second server (Windows Server 2022) will be used for other purposes such as file storage, applications, or additional services required within the network.
+    - Additionally, a Linux server (Debian 12.5) will be implemented for monitoring purposes. This server will monitor the network and all devices within it.
 
 2. **Four Client Machines**:
     - These machines will be used to simulate end-user workstations within the network. Each machine will be joined to the domain controlled by the Domain Controller.
@@ -489,6 +490,72 @@ In this section, I will install and integrate two programs, **Zabbix and Grafana
 ![Zabbix Logo](/images/zabbix-logo.png)
 ![Grafana Logo](/images/grafana-logo.jpg)
 
-I will proceed to install both tools on the secondary server (SV02) because it's generally advisable to keep monitoring and visualization tasks separate from the domain controller (DC01) to avoid overloading the primary domain controller and to ensure better performance and security. By using SV02 for these tasks, we can offload the workload from the DC01 and maintain a more organized and manageable server environment.
+To monitor the machines, I will use the Linux operating system, specifically the Debian 12.5 distro, on which I will install Zabbix and Grafana, tools for monitoring and data visualization respectively.
 
-To start the installation, I go to the Zabbix website: [Zabbix](https://www.zabbix.com/), download it, and run the installer.
+To start creating the Linux virtual machine, I first need to download the Debian distro, which can be downloaded from the official website: [debian.org](https://www.debian.org/index.es.html).
+
+Once downloaded, I proceed to start creating the virtual machine:
+
+First, I specify the name of the machine, which will be **MON01** as it is an abbreviation for 'Monitoring', clearly indicating that the machine is dedicated to monitoring.
+
+Additionally, I check the box to place the virtual machine in a location different from the default setting in Hyper-V. In this case, I chose to store it in **C:\Hyper-V\VMs\\**, the same location where I stored all the company's machines.
+
+![Linux 1](/images/lnx1.PNG)
+
+In this case, I will choose to allocate **3GB (3072MB)** of RAM to the machine. Considering that 2048MB (2GB) is a basic amount for a small network of up to 10 devices and 4096MB (4GB) is a moderate amount for a network of up to 30-50 devices, I opted for an intermediate value between the two. This should not pose any issues, as it can be easily configured in Hyper-V.
+
+![Linux 2](/images/lnx2.PNG)
+
+Next, in the disk configuration, I choose to create a new virtual hard disk (VHD) with a size of 2TB (2048GB). This size is more than sufficient (even excessive) but ensures that I won't encounter any storage issues on the virtual machine.
+
+![Linux 3](/images/lnx3.PNG)
+
+Next, I select 'Install an operating system from a bootable CD/DVD-ROM' and locate the downloaded .ISO file of the Debian operating system, which in my case is located at **C:\Users\juanm\OneDrive\Desktop\Herramientas\Sistemas Operativos\\**.
+
+![Linux 4](/images/lnx4.PNG)
+
+Finally, I review all the settings and verify that everything is correct. As it is the case, I press 'Finish' to complete the virtual machine creation.
+
+![Linux 5](/images/lnx5.PNG)
+
+As you can see in the image, the virtual machine was created correctly. Now, I proceed to start it to begin with the installation of the operating system.
+
+![Linux 6](/images/lnx6.PNG)
+
+Once the virtual machine is started, the Debian 12.5 operating system will begin to be installed.
+First, I must indicate what action I want to perform. 
+In this case, I will perform a 'Graphical Install'.
+
+![Linux 7](/images/lnx7.PNG)
+
+Now, I must select the language.
+In this case, I select "English", but I could have selected my native language (Spanish).
+
+![Linux 8](/images/lnx8.PNG)
+
+The installer will then load the installation components from the downloaded .ISO file. <br/> After that, it will try to obtain an IP address via DHCP (Dynamic Host Configuration Protocol).
+
+Once all this happens, I must define the hostname. 
+In this case, I will choose to put "deb-mon01", which is a mix between the operating system (debian) and the main function of the machine (monitoring).
+
+![Linux 9](/images/lnx9.PNG)
+
+Now, I must define the password of the root user, which is the most important user of the system. For this reason, this password cannot be forgotten.
+
+![Linux 10](/images/lnx10.PNG)
+
+Now, I select a user name which will be created to perform the tasks that do not require elevated privileges. This is similar to creating a local user in Windows in addition to the Administrator user.
+In this case, I will choose to create the user "juanma".
+
+![Linux 11](/images/lnx11.PNG)
+
+Now, it is time to partition the disks.
+In this case, I chose a guided partition as I find no justification for partitioning manually on a homelab.
+In a real environment, this should be configured in a more detailed way, creating a partition for the operating system and one for the swap.
+
+![Linux 12](/images/lnx12.PNG)
+
+Finally, a summary of the automatic partitioning is shown.
+Although the "swap" partition is created, which serves as an extension of the virtual memory when the physical RAM (Random Access Memory) is fully utilized, the amount allocated may not be the recommended amount, but for a test environment such as this homelab this is more than enough.
+
+![Linux 13](/images/lnx13.PNG)
