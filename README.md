@@ -559,3 +559,29 @@ Finally, a summary of the automatic partitioning is shown.
 Although the "swap" partition is created, which serves as an extension of the virtual memory when the physical RAM (Random Access Memory) is fully utilized, the amount allocated may not be the recommended amount, but for a test environment such as this homelab this is more than enough.
 
 ![Linux 13](/images/lnx13.PNG)
+
+After unpacking and installing the base files, the system will query if a proxy is being used (in this case no) and which is the country from where I am using the operating system to recommend mirrors from where the desired packages will be installed.
+
+Next, the system starts configuring **'apt' (Advanced Package Tool)**, which is a command line tool used to manage software packages. Its main function is to facilitate the installation, update and removal of applications and utilities in the operating system.
+
+![Linux 14](/images/lnx14.PNG)
+
+Then, it is asked about what software you want to install.
+In this case, several desktop environments are shown (I will choose to use GNOME), the web server and the SSH Server (which serves to allow remote connections to the machine).
+In this case, I won't install either (web or ssh).
+
+![Linux 15](/images/lnx15.PNG)
+
+Finally, GRUB (the operating system boot loader) is installed on the primary partition and then the installation is completed.
+
+![Linux 16](/images/lnx16.PNG)
+
+Once the computer has restarted, I find the following screen in which I can log in to the system with the user (juanma) and the previously defined password:
+
+![Linux 17](/images/lnx17.PNG)
+
+Once this is done (logged in), I am already using the Debian operating system.
+
+![Linux 18](/images/lnx18.PNG)
+
+Following this, I must install Zabbix and Grafana to begin monitoring the company's equipment.
