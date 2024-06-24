@@ -586,6 +586,8 @@ Once this is done (logged in), I am already using the Debian operating system.
 
 Following this, I must install Zabbix and Grafana to begin monitoring the company's equipment.
 
+### Zabbix Installation
+
 To begin the installation of Zabbix, I go to their official website --> [https://www.zabbix.com/download](https://www.zabbix.com/download) and select the following options:
 
 ![Zabbix 1](/images/zbx1.PNG)
@@ -708,3 +710,33 @@ Once 'Finish' is pressed, I am redirected to a login where I must enter the foll
 Once this is done, I conclude with the configuration and installation of the Zabbix server. Now, the only thing left is to install the client on the machines I want to monitor or discover them automatically on the network.
 
 ![Zabbix 27](/images/zbx27.PNG)
+
+Once installed on Linux, I proceed to download the agent on Windows. <br/>
+In this case, I will install and configure the agent manually on each machine, but I could do it using PDQ Deploy from SV02.
+
+![Zabbix 28](/images/zbx28.PNG)
+
+Once downloaded and started, I must indicate the IP address of the Zabbix server (i.e. the Debian 12.5 machine where I installed the Zabbix server).
+In this case, I can verify this information using the ip address show command (or ip a s for short).
+
+![Zabbix 29](/images/zbx29.PNG)
+
+![Zabbix 30](/images/zbx30.PNG)
+
+Then, I press 'Next' and finish the agent installation. After that, I proceed to repeat this process on the other machines (DC01, JMFSOFT-PC01, JMFSOFT-PC02, JMFSOFT-PC03, JMFSOFT-PC04).
+
+![Zabbix 31](/images/zbx31.PNG)
+
+Before installing it on the other machines, I can verify that it has been installed and is working correctly by checking in the Windows Services:
+
+![Zabbix 32](/images/zbx32.PNG)
+
+Then, I proceed to add the host to which I have just installed the agent with its corresponding data (Name: SV02, IP: 192.168.1.6, etc.).
+
+![Zabbix 33](/images/zbx33.PNG)
+
+![Zabbix 34](/images/zbx34.PNG)
+
+From now on, I can collect information from the SV02 server, and visualize it from MON01 (Linux Debian 12.5):
+
+![Zabbix 35](/images/zbx35.PNG)
