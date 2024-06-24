@@ -740,3 +740,15 @@ Then, I proceed to add the host to which I have just installed the agent with it
 From now on, I can collect information from the SV02 server, and visualize it from MON01 (Linux Debian 12.5):
 
 ![Zabbix 35](/images/zbx35.PNG)
+
+### Grafana Installation
+
+To begin the installation of Grafana, I go to their official website --> [https://grafana.com/](https://grafana.com/).
+
+In this case, I will choose to install from the apt package manager, for the sake of simplicity and complete integration with the operating system. Besides, it has the advantage of automatic updates when I run the "apt update" command.
+
+Another option is to install by downloading and installing a ".deb" file, which has advantages such as access to the latest version and full control of the installation.
+
+![Grafana 1](/images/grf1.PNG)
+
+
