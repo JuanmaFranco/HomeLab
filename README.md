@@ -751,4 +751,14 @@ Another option is to install by downloading and installing a ".deb" file, which 
 
 ![Grafana 1](/images/grf1.PNG)
 
+To start with the installation, I perform the following steps:
 
+![Grafana 2](/images/grf2.PNG)
+
+![Grafana 3](/images/grf3.PNG)
+
+The packages installed in the above image are required as they provide the following:
+
+  - apt-transport-https: Enables support for HTTPS connections in apt.
+  - software-properties-common: Provides additional tools to manage software repositories.
+  - wget: Used to download files from the command line.
