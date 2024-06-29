@@ -759,6 +759,81 @@ To start with the installation, I perform the following steps:
 
 The packages installed in the above image are required as they provide the following:
 
-  - apt-transport-https: Enables support for HTTPS connections in apt.
-  - software-properties-common: Provides additional tools to manage software repositories.
-  - wget: Used to download files from the command line.
+  - **apt-transport-https**: Enables support for HTTPS connections in apt.
+  - **software-properties-common**: Provides additional tools to manage software repositories.
+  - **wget**: Used to download files from the command line.
+
+![Grafana 4](/images/grf4.PNG)
+
+![Grafana 5](/images/grf5.PNG)
+
+These commands are used to add the Grafana GPG (Gnu Privacy Guard) key to the system, allowing to verify the authenticity of the packages downloaded from the Grafana repository. 
+
+  - **sudo mkdir -p /etc/apt/keyrings/**: mkdir -p creates the specified directory (/etc/apt/keyrings/). The -p option ensures that if the directory already exists, an error is not generated.
+  
+  - **wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null**: Downloads the Grafana GPG key and saves it in /etc/apt/keyrings/grafana.gpg
+
+The last command (**ls -l /etc/apt/keyrings/**) was executed only to verify that the key was downloaded correctly.
+
+![Grafana 6](/images/grf6.PNG)
+
+![Grafana 7](/images/grf7.PNG)
+
+The command
+  - **echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list** 
+
+is used to add a Grafana repository line to the apt source configuration file on Debian-based systems (such as Ubuntu).
+
+![Grafana 8](/images/grf8.PNG)
+
+![Grafana 9](/images/grf9.PNG)
+
+Now, I ran the command
+  
+  - **sudo apt-get update** 
+
+to update the list of available packages.
+
+When you run "sudo apt-get update", the system contacts each of the repositories listed in /etc/apt/sources.list and in the files inside the /etc/apt/sources.list.d/ directory (such as grafana.list that we configured earlier).
+
+![Grafana 10](/images/grf10.PNG)
+
+![Grafana 11](/images/grf11.PNG)
+
+The 
+
+  - **sudo apt-get install grafana** 
+  
+command is used to install Grafana on a Debian-based system, such as Ubuntu.
+
+![Grafana 12](/images/grf12.PNG)
+
+Finally, I run the command
+
+  - **apt list --installed | grep grafana**
+
+to verify that grafana was installed correctly.
+
+![Grafana 13](/images/grf13.PNG)
+
+Finally I run the commands 
+
+  - **systemctl start grafana-server**
+  - **systemctl enable grafana-server**
+
+The systemctl start grafana-server command is used to manually start the Grafana service on the system. 
+
+The systemctl enable grafana-server command is used to configure Grafana to start automatically at system startup.
+
+### Zabbix and Grafana Integration
+
+To access the Grafana web portal, I go to the address (localhost:3000) or simply use my hostname (deb-mon01:3000) or my ip address (192.168.0.7:3000):
+
+![Grafana 14](/images/grf14.PNG)
+
+By default, I can login with the following credentials:
+
+    - user: admin
+    - password: admin
+
+![Grafana 15](/images/grf15.PNG)
