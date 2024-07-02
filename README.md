@@ -853,4 +853,33 @@ To integrate Zabbix with Grafana, I perform the following steps:
   In this case, I have 2 virtual machines turned off (JMFSOFT-PC03 and JMFSOFT-PC04) for a lack of resources, but in a real environment they would all be on. <br/><br/>
   ![Grafana 16](/images/grf16.PNG)
 
-2. 
+2. Then, once this is confirmed, I must log in to the Grafana web interface.
+  To do this, I go to deb-mon01:3000: <br/><br/>
+  ![Grafana 17](/images/grf17.PNG)
+
+3. Once this is done, in the left panel, I go to Administration --> Plugins: <br/><br/>
+   ![Grafana 18](/images/grf18.PNG) <br/><br/>
+   Inside Plugins, I look for the "Zabbix" plugin and install it: <br/><br/>
+   ![Grafana 19](/images/grf19.PNG) <br/><br/>
+
+4. Now, once the plugin is installed and enabled, I must restart the grafana-server service, with the following command:
+    - **sudo systemctl restart grafana-server** <br/><br/> 
+    ![Grafana20](/images/grf20.PNG) <br/><br/> 
+
+5. Now, I must link the Grafana service to Zabbix. <br/>
+  Within the web interface, from the Connection console, I go to Data Sources and then select "Add Data Source".<br/> <br/> 
+  Once there, I choose "Zabbix" and complete the following fields: <br/>
+
+     - **Name**: Zabbix Server
+     - **URL**: http://deb-mon01/zabbix/api_jsonrpc.php 
+     - **Username**: Admin
+     - **Password**: zabbix
+
+    Although it is recommended to create a dedicated account especially for this instead of using the "Admin" account, for the sake of simplicity, I have decided to use the Admin account.
+
+    ![Grafana21](/images/grf21.PNG) <br/><br/> 
+    ![Grafana22](/images/grf22.PNG) <br/>
+
+    Once this is saved, a green banner should be displayed indicating that you have successfully connected to the data source. <br/> If not, a red banner is displayed indicating an error.
+    
+    ![Grafana23](/images/grf23.PNG) <br/>
