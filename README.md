@@ -11,8 +11,9 @@ Welcome to my personal project of creating a homelab utilizing Active Directory,
 1. [Homelab Creation](#homelab-creation)
 2. [User and Group Creation](#user-and-group-creation)
 3. [Password Reset](#password-reset)
-4. [Software Deployment](#software-deployment)
-5. [Monitoring and Visualization](#monitoring-and-visualization)
+4. [Multi-factor Authentication](#multi-factor-authentication-mfa)
+5. [Software Deployment](#software-deployment)
+6. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -397,6 +398,57 @@ Once the button is pressed, the user's password will be reset and a temporary pa
 In this case, the temporary password is “Xavo6347”.
 
 ![Ticket-Reset13](/images/ticket-reset13.png)
+
+-------------------------------------------------------------------------------------------------
+
+## Multi-factor authentication (MFA)
+
+Multi-Factor Authentication (MFA) is a crucial security measure that adds an additional layer of protection to digital systems and accounts. Its main purpose is to mitigate the risks associated with password-only authentication, which can be vulnerable to various forms of attacks such as phishing, password theft, and the use of weak passwords.
+
+![MFA-1](/images/mfa1.png)
+
+Enabling multi-factor authentication in an enterprise environment is a best practice because it significantly enhances security, reduces the risk of account compromise and meets regulatory standards, all while improving access management and protecting the organization's critical data from both internal and external threats.
+
+First, I am going to simulate the creation of a ticket requesting the activation of this feature (Multifactor Authentication).
+
+![MFA-3](/images/mfa3.PNG)
+
+To do this, I perform the following steps:
+
+1. First, I go to the Azure portal --> https://portal.azure.com/
+   
+    ![MFA-2](/images/mfa2.PNG)
+
+2. Then, I go to the "Users" tab and click on the "MFA per user":
+   
+   ![MFA-4](/images/mfa4.PNG)
+
+3. Once clicked, I get the following interface:
+   
+   ![MFA-5](/images/mfa5.PNG)
+
+4. Now, I must choose which users I want to enable multi-factor authentication.
+  In this case, the ticket states that I want to enable it for all users, so I select all users and then click on "Enable":
+
+    ![MFA-6](/images/mfa6.PNG)
+   
+5. Once I click on "enable", the following dialog box is displayed:
+   
+   ![MFA-7](/images/mfa7.PNG)
+
+6. Once accepted, the following banner is displayed, indicating that multi-factor authentication has been enabled for the selected users:
+   
+   ![MFA-8](/images/mfa8.PNG)
+
+7. In case I am not sure, I can check that MFA was enabled correctly by seeing the word "Enabled" in the section " MULTI-FACTOR AUTH STATUS":
+   
+   ![MFA-9](/images/mfa9.PNG)
+
+Finally, it remains to answer the ticket indicating to the user (in this case, Carlos Perez), that the multifactor authentication (MFA) was successfully enabled.
+
+In addition, evidence is attached to the ticket demonstrating the indicated action.
+
+![MFA-10](/images/mfa10.PNG)
 
 -------------------------------------------------------------------------------------------------
 
