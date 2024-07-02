@@ -955,3 +955,5 @@ To integrate Zabbix with Grafana, I perform the following steps:
   This completes the installation of Zabbix, the installation of Grafana, and the subsequent integration of Zabbix with Grafana for visualization.
 
     ![Grafana25](/images/grf25.PNG) <br/>
+
+-------------------------------------------------------------------------------------------------
