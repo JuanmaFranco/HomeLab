@@ -837,3 +837,20 @@ By default, I can login with the following credentials:
     - password: admin
 
 ![Grafana 15](/images/grf15.PNG)
+
+Now, I must integrate Zabbix with Grafana. 
+
+- **Zabbix** is a network and system monitoring platform that allows you to monitor and track the performance of IT infrastructures, networks, services and applications.
+
+- **Grafana** is an open source data visualization and analysis platform designed to work with time series and metrics data.
+
+Grafana can be integrated with Zabbix as a data source, allowing users to import data from Zabbix and create custom visualization dashboards that combine data from multiple sources.
+
+To integrate Zabbix with Grafana, I perform the following steps:
+
+1. First, I verify that all the devices are recognized in Zabbix. 
+  To verify this, I go to deb-mon01/zabbix/, then inside the web interface I go to Data Collection and then Hosts.
+  In this case, I have 2 virtual machines turned off (JMFSOFT-PC03 and JMFSOFT-PC04) for a lack of resources, but in a real environment they would all be on. <br/><br/>
+  ![Grafana 16](/images/grf16.PNG)
+
+2. 
