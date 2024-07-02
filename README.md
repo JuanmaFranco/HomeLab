@@ -883,3 +883,23 @@ To integrate Zabbix with Grafana, I perform the following steps:
     Once this is saved, a green banner should be displayed indicating that you have successfully connected to the data source. <br/> If not, a red banner is displayed indicating an error.
     
     ![Grafana23](/images/grf23.PNG) <br/>
+
+6. Once the connection with the data source is made, I can proceed with the creation of Dashboards.
+   
+   To do this, fill in the "**Host**" field with the host name of the device to be monitored.
+    For example: DC01.
+    Then, I fill in the "**Item**" field with the item I want to monitor. For example, if I want to see the CPU utilization, I fill in "Windows: CPU Utilization":
+
+    ![Grafana24](/images/grf24.PNG) <br/>
+
+    In this case, the usefulness of the graph cannot be fully appreciated since the server was inactive and therefore the CPU utilization is practically null, but in a real environment its use could be analyzed over time.
+
+    I decided to use a "**Time Series**" type graph because it is the most appropriate for the following reason: 
+    CPU utilization varies continuously as processes run on the server. A time series graph captures these changes in real time and allows you to see how the CPU load fluctuates over the course of the day, week, month or any other desired time period. In addition, patterns and trends can be analyzed.
+
+    For demonstration purposes, I also decided to add the "**Disk Write Rate**" to the dashboard.
+  
+7. Finally, I created another panel and added it to the dashboard.
+  This completes the installation of Zabbix, the installation of Grafana, and the subsequent integration of Zabbix with Grafana for visualization.
+
+    ![Grafana25](/images/grf25.PNG) <br/>
