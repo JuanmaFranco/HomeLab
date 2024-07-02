@@ -840,7 +840,7 @@ is used to add a Grafana repository line to the apt source configuration file on
 
 ![Grafana 9](/images/grf9.PNG)
 
-Now, I ran the command
+Now, I ran the command   
   
   - **sudo apt-get update** 
 
