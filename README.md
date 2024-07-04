@@ -842,7 +842,7 @@ is used to add a Grafana repository line to the apt source configuration file on
 
 Now, I ran the command   
   
-  - **sudo apt-get update** 
+  - **sudo apt-get update**  
 
 to update the list of available packages.
 
@@ -958,5 +958,5 @@ To integrate Zabbix with Grafana, I perform the following steps:
 
 -------------------------------------------------------------------------------------------------
   
-  
+
 
