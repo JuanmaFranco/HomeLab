@@ -868,7 +868,7 @@ to verify that grafana was installed correctly.
 
 ![Grafana 13](/images/grf13.PNG)
 
-Finally I run the commands 
+Finally I run the commands  
 
   - **systemctl start grafana-server**
   - **systemctl enable grafana-server**
