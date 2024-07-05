@@ -534,7 +534,60 @@ In this section of the project, remote access between company computers will be 
 
 This concept is fundamental in day-to-day IT support, since it is a required skill that is very useful because at times it may not be possible to physically access a computer (due to geographical issues, for example).
 
+There are many tools on the market that facilitate remote access, such as TeamViewer or AnyDesk.
+Even Windows comes with a tool built into the operating system itself, but for reasons of versatility I will use TeamViewer because it works on many operating systems and it is also my tool of choice, but I could easily use AnyDesk, which also has a very simple interface, less resource consumption and lower licensing costs.
 
+![Teamviewer-Logo](/images/teamviewer-logo.png)
+
+In this case, the connection will be made from the SV02 machine to the JMFSOFT-PC01 client machine.
+
+To do this, I must perform the following steps:
+
+1. First, I need to install TeamViewer on both computers.
+
+    To download the executable I go to [https://www.teamviewer.com/](https://www.teamviewer.com/) and click on Free Download.
+
+    ![TeamViewer-1](/images/tw1.PNG)
+
+2. Once this is done, I select the desired plan. 
+    
+    In this case, I click on "Free", but in a business environment you may have to opt for the other licensing options.
+
+    ![TeamViewer-2](/images/tw2.PNG)
+
+    Now, I must choose which type of installation I want, each one with its respective functionalities and/or advantages as appropriate.
+
+    Among the options are:
+
+    - **TeamViewer QuickSupport**: No full installation is required; it is a lightweight, portable application. Ideal for quick and occasional support.
+
+    - **TeamViewer Full Client**: Offers all TeamViewer functionalities for full remote access and control. Allows both inbound and outbound connection, which means you can control other devices or be controlled. Includes features such as file transfer, chat, and Wake-on-LAN.
+
+    - **TeamViewer Host**: Provides continuous remote access to devices, ideal for long-term remote management. Requires installation on the device. Allows unlimited and permanent remote connections. Ideal for keeping computers and servers under constant surveillance and support.
+
+    - **TeamViewer MSI Package**: Facilitates the distribution and management of TeamViewer installations through group policies in corporate networks. MSI format suitable for deploying and managing installation on multiple devices via Active Directory and GPOs. Supports custom configurations to suit specific needs. Allows automating installation and configuring pre-deployment settings.
+
+    - **TeamViewer Meeting**: Dedicated platform for online meetings, video conferencing, and real-time collaboration. Provides tools for high-quality audio and visual communication. Includes screen sharing, chat, and meeting recording functionalities.
+
+    Below is a comparative table showing the main features between each version:
+
+    ![TeamViewer-4](/images/tw4.PNG)
+
+    In this case I chose to install the "Full Client" version on the SV02, in its 64-Bits version.
+
+3. Once downloaded and installed, the client is executed, which looks as follows:
+
+    ![TeamViewer-5](/images/tw5.PNG)
+
+    To make a connection, it is necessary to use the ID and password.
+
+    These credentials should only be shared between the IT Support Technician and the person who wishes to receive help from the IT Support Technician, otherwise anyone could gain remote access to the company's equipment.
+
+4. Now, I download and install the QuickSupport version on the JMFSOFT-PC01 computer (just for demonstration and simplicity, as I could have opted for the Full Client version).
+
+    ![TeamViewer-6](/images/tw6.PNG)
+
+5. Finally, just share the credentials of the client computer (JMFSOFT-PC01) with the IT Support manager so that he/she can enter them in the TeamViewer client to gain remote access and troubleshoot problems.
 
 -------------------------------------------------------------------------------------------------
 
