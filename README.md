@@ -13,7 +13,8 @@ Welcome to my personal project of creating a homelab utilizing Active Directory,
 3. [Password Reset](#password-reset)
 4. [Multi-factor Authentication](#multi-factor-authentication-mfa)
 5. [Software Deployment](#software-deployment)
-6. [Monitoring and Visualization](#monitoring-and-visualization)
+6. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
+7. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -524,6 +525,10 @@ Now, I verify that 7zip was installed correctly on the client machines:
 ![PDQ13](/images/pdq13.PNG)
 
 And, with this, I can successfully conclude the deployment.
+
+-------------------------------------------------------------------------------------------------
+
+## Remote Access and Troubleshooting
 
 -------------------------------------------------------------------------------------------------
 
