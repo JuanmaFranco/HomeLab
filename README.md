@@ -530,6 +530,12 @@ And, with this, I can successfully conclude the deployment.
 
 ## Remote Access and Troubleshooting
 
+In this section of the project, remote access between company computers will be implemented for troubleshooting purposes.
+
+This concept is fundamental in day-to-day IT support, since it is a required skill that is very useful because at times it may not be possible to physically access a computer (due to geographical issues, for example).
+
+
+
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
