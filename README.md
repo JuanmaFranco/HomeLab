@@ -1083,7 +1083,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
     - **Jira Service Management (JSM)**: Adopted to simulate real-world IT ticketing and service management.
 
       ![Jira Service Management](/images/jsm-logo.jpg)
-
+   
 
 ### Key Project Components:
 
