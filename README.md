@@ -1042,7 +1042,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
       ![Windows-SV](/images/windows-sv-logo.jpg)
 
-    - **Windows 10**: Set up as client machines.
+    - **Windows 10**: Set up as client machines.  
     
       ![Windows-10](/images/windows10-logo.png)
 
