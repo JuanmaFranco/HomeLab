@@ -1089,7 +1089,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
 1. **Homelab Setup**:
 
-    - Created a fully functional homelab consisting of two Windows Server 2022 VMs, four Windows 10 client VMs, and a Linux VM.  
+    - Created a fully functional homelab consisting of two Windows Server 2022 VMs, four Windows 10 client VMs, and a Linux VM.    
     - Configured the VMs to replicate a corporate IT environment, including domain joining and policy application.
 
 2. **Active Directory Deployment and Management**:
