@@ -1066,7 +1066,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
       ![PDQ-Deploy](/images/pdq-logo.png)
 
-    - **ADUC (Active Directory Users and Computers)** and **ADAC (Active Directory Administrative Center)**: Employed for detailed management of the AD environment.
+    - **ADUC (Active Directory Users and Computers)** and **ADAC (Active Directory Administrative Center)**: Employed for detailed management of the AD environment.  
 
 5. **Monitoring and Visualization**:
    
