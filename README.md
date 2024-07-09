@@ -4,6 +4,7 @@
 
 Welcome to my personal project of creating a homelab utilizing Active Directory, both on-premises and in the cloud with Azure Active Directory. This project showcases the step-by-step creation of the homelab, including skills acquired such as user and group creation, password resets, and various other administrative tasks.
 
+
 -----------------------------------------------------------------------------------------------------
 
 # Table of Contents
