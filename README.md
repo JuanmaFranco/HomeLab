@@ -1,4 +1,4 @@
-# Active Directory Home Lab - Personal Project
+# IT Support and Administration Home Lab - Personal Project
 
 ![Home Lab Image](images/homelab.jpg)
 
@@ -11,11 +11,12 @@ Welcome to my personal project of creating a homelab utilizing Active Directory,
 
 1. [Homelab Creation](#homelab-creation)
 2. [User and Group Creation](#user-and-group-creation)
-3. [Password Reset](#password-reset)
-4. [Multi-factor Authentication](#multi-factor-authentication-mfa)
-5. [Software Deployment](#software-deployment)
-6. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
-7. [Monitoring and Visualization](#monitoring-and-visualization)
+3. [Group Policy Management and Implementation](#group-policy-management-and-implementation)
+4. [Password Reset](#password-reset)
+5. [Multi-factor Authentication](#multi-factor-authentication-mfa)
+6. [Software Deployment](#software-deployment)
+7. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
+8. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -320,6 +321,16 @@ Once the .csv is downloaded, I fill in each column with the corresponding data, 
 Once all users are created, I get the following:
 
 ![Azure11](/images/azure11.PNG)
+
+-------------------------------------------------------------------------------------------------
+
+## Group Policy Management and Implementation
+
+GPOs (Group Policy Objects) are a feature of Windows Server operating systems that allow administrators to centrally manage and configure policies and settings for systems and users in an Active Directory domain network. 
+
+Basically, GPOs are collections of policy settings that can be applied to users and computers in an Active Directory-based network environment. These policies can cover a wide range of settings, from system security to user environment customization.
+
+
 
 -------------------------------------------------------------------------------------------------
 
