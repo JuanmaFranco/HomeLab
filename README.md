@@ -330,7 +330,35 @@ GPOs (Group Policy Objects) are a feature of Windows Server operating systems th
 
 Basically, GPOs are collections of policy settings that can be applied to users and computers in an Active Directory-based network environment. These policies can cover a wide range of settings, from system security to user environment customization.
 
+![GPO-1](/images/gpo-1.PNG)
 
+There are some basic concepts of GPOs that need to be understood before starting to configure them:
+
+### GPO (Group Policy Objects) linking
+
+GPOs must be linked to a container in Active Directory to be applied. 
+
+Containers can be sites, domains or Organizational Units (OUs).
+
+### GPO Inheritance / Precedence
+
+GPO inheritance refers to how policies configured in GPOs are applied and inherited through the Active Directory hierarchy. 
+
+The hierarchy follows this order:
+
+1. **Local**: Local policies on the computer.
+2. **Site**: Policies linked to a site in Active Directory.
+3. **Domain**: Policies linked to the domain.
+4. **Organizational Units (OUs)**: Policies linked to specific OUs.
+
+Order of Application:
+
+1. **Local**: Local policies are applied first.
+2. **Site**: Site policies are applied after.
+3. **Domain**: Domain policies are applied next.
+4. **OUs**: OU policies are applied in order from the top-level OU to the most specific OU containing the object (user or equipment).
+
+![GPO-2](/images/gpo-2.PNG)
 
 -------------------------------------------------------------------------------------------------
 
