@@ -340,6 +340,8 @@ GPOs must be linked to a container in Active Directory to be applied.
 
 Containers can be sites, domains or Organizational Units (OUs).
 
+![GPO-3](/images/gpo-3.PNG)
+
 ### GPO Inheritance / Precedence
 
 GPO inheritance refers to how policies configured in GPOs are applied and inherited through the Active Directory hierarchy. 
@@ -359,6 +361,32 @@ Order of Application:
 4. **OUs**: OU policies are applied in order from the top-level OU to the most specific OU containing the object (user or equipment).
 
 ![GPO-2](/images/gpo-2.PNG)
+
+### Inheritance Modifiers
+
+Mechanisms exist to modify how GPOs are inherited.
+
+1. **Inheritance Blocking**:
+
+    You can block inheritance of GPOs into a specific OU. This means that higher level policies will not be applied to that OU.
+    
+    How to enable: In the GPMC, select the OU, right click and select "Block Inheritance".
+
+2. **Enforced**:
+
+    A GPO can be marked as "Enforced", which means that its policies cannot be blocked by any lower OU.
+    
+    How to enable: In the GPMC, select the GPO, right click and select "Enforced".
+
+3. **Security Filtering**:
+
+    GPOs can be filtered to only apply to specific users or computers by using Security Groups.
+    
+    How to configure: In the GPMC, select the GPO, go to the "Scope" tab and adjust the permissions in the Security Filtering section.
+
+Now that all the basic concepts are understood, it is time to show the steps for the application of such group policies.
+
+
 
 -------------------------------------------------------------------------------------------------
 
