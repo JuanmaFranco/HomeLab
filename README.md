@@ -2,8 +2,9 @@
 
 ![Home Lab Image](images/homelab.jpg)
 
-Welcome to my personal project of creating a homelab utilizing Active Directory, both on-premises and in the cloud with Azure Active Directory. This project showcases the step-by-step creation of the homelab, including skills acquired such as user and group creation, password resets, and various other administrative tasks.
+Welcome to my comprehensive IT infrastructure project, where I have meticulously designed and implemented a homelab environment integrating Active Directory solutions, both on-premises and in the cloud through Azure Active Directory. This project highlights my proficiency in deploying and managing complex IT systems, utilizing a range of tools and skills to ensure robust operational capabilities.
 
+This project not only showcases my technical expertise in IT infrastructure management but also underscores my ability to design, deploy, and optimize enterprise-grade solutions. It reflects my commitment to excellence in IT service delivery and my readiness to contribute effectively to organizational IT operations.
 
 -----------------------------------------------------------------------------------------------------
 
@@ -386,7 +387,132 @@ Mechanisms exist to modify how GPOs are inherited.
 
 Now that all the basic concepts are understood, it is time to show the steps for the application of such group policies.
 
+### Steps to configure and apply a GPO
 
+   1. **Open the Group Policy Management Console (GPMC)**:
+   
+      Log on to a domain controller or machine with the administrative tools installed (RSAT). <br/>
+      Open the Group Policy Management Console (GPMC). You can do this by searching for "gpmc.msc" in the Start menu or through Administrative Tools.
+
+      ![GPO-4](/images/gpo-4.PNG)
+
+
+   2. **Create a New GPO**:
+   
+      In the GPMC, navigate to the container in which you want to create the GPO. This can be a domain, site, or an organizational unit (OU). <br/>
+      Right-click on the container and select "Create a GPO in this domain and link it here...". 
+
+      In this case, I will create a GPO that applies to the entire domain. 
+
+      ![GPO-5](/images/gpo-5.png)
+
+   3. **Name the GPO**:
+   
+      Assign a descriptive name to the new GPO. For example, "Password Policy" or "Desktop Wallpaper".  <br/>
+      
+      In this case, I will configure the GPO to apply a secure password policy. 
+
+      ![GPO-6](/images/gpo-6.PNG)
+
+   4. **Edit the GPO**:
+      
+      Once created, the new GPO will appear in the list of GPOs linked to the selected domain, site or OU. <br/>
+      
+      Right-click on the GPO and select "Edit" to open the Group Policy Management Editor.
+
+      ![GPO-7](/images/gpo-7.png)
+
+      Once this is done, the Group Policy Management Editor will open.
+
+   5. **Configure Desired Policies**:
+   
+      In the Group Policy Management Editor, you can configure policies under two main categories:
+
+        **Computer Settings**:
+
+        - These policies are applied at the computer level. Examples include security settings, software installation, network policies, etc.
+
+        **User Configuration**:
+
+        - These policies are applied at the user level. Examples include desktop settings, folder redirection, software restrictions, etc.
+
+      ![GPO-8](/images/gpo-8.PNG)
+
+      In this case, I go to:
+
+        **Computer Configuration > Windows Settings > Security Settings > Account Policies > Password Policy**.
+
+      ![GPO-9](/images/gpo-9.PNG)
+
+      Now, I double click on the policy to be modified and a window will open that will allow me to enable/disable this policy and also to modify the values.
+
+      ![GPO-10](/images/gpo-10.PNG)
+
+      Finally, I click on "Apply" and the password length policy is set to 8 characters long.
+
+      ![GPO-11](/images/gpo-11.PNG)
+
+   6. **Apply the GPO**:
+   
+      The GPO is already bound to the selected domain, site or OU, and the policies will be automatically applied to objects in that scope.
+
+      The GPO will be processed on the next policy update cycle (typically every 90 minutes on computers and at user login). 
+
+   7. **Force Policy Update**:
+
+      To enforce policies immediately, you can force an update on affected computers and users:
+
+        On the Domain Controller:
+
+        - Run **gpupdate /force** at the command prompt to update policies on the domain controller.
+
+        On Client Computers:
+
+        - On each computer, **run gpupdate /force** at the command prompt to apply the new policies immediately. 
+
+      ![GPO-12](/images/gpo-12.PNG)
+
+
+### Other examples of group policies that from my point of view would be good to apply
+
+In addition to the password group policy that strengthens security, there are others that I believe are essential to implement in a business environment:
+
+1. **Disable the use of USB devices**:
+
+    **Policy**: Deny read and write access to removable storage devices.
+
+    **Benefit**: Mitigates the risk of data loss and the introduction of malware through unauthorized USB devices.
+
+    **Location**: Computer Configuration > Policies > Administrative Templates > System > Removable Storage Access
+
+    ![GPO-13](/images/gpo-13.PNG)
+
+2. **Disable the installation of unauthorized software**:
+
+    **Policy**: Disable installation of devices matching any of these device IDs.
+
+    **Benefit**: Ensures that only approved software is installed, reducing the risk of system vulnerabilities and conflicts.
+
+    **Location**: Computer Configuration > Policies > Administrative Templates > System > Driver Installation
+
+    ![GPO-14](/images/gpo-14.PNG)
+
+3. **Disable access to the Control Panel and Settings**:
+
+    **Policy**: Prohibit access to the Control Panel and Settings.
+
+    **Benefit**: Prevents unauthorized changes to system settings and reduces the technical support burden due to inadvertent configuration.
+
+    **Location**: User Configuration > Policies > Administrative Templates > Control Panel
+
+    ![GPO-15](/images/gpo-15.PNG)
+
+
+### Example of what happens if I try to perform an action blocked by a group policy
+
+If I try, for example, to access the control panel after it has been locked by group policy and group policies have been updated (either by their natural cycle or by the gpupdate /force command), I get the following message:
+
+![GPO-16](/images/gpo-16.PNG)
 
 -------------------------------------------------------------------------------------------------
 
@@ -1165,6 +1291,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
     - Set up a primary domain controller with Windows Server 2022.
     - Implemented organizational units (OUs) to mirror departmental structures.
     - Created user accounts and assigned them to appropriate OUs, simulating real-world departmental hierarchies.
+    - Integrated Group Policy Objects (GPOs) to enforce security policies, manage desktop configurations, and ensure uniformity across the domain.
   
 3. **Cloud Identity and Security**:
 
