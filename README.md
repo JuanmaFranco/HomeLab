@@ -46,6 +46,7 @@ In this homelab setup, we will be using Hyper-V to create a virtualized environm
         3. JMFSOFT-PC03
         4. JMFSOFT-PC04
 
+
 ### Organizational Units (OUs) for Departments
 
 To keep our domain structure well-organized, we will create Organizational Units (OUs) for each department. This will help us manage users, computers, and other resources efficiently within Active Directory. The following OUs will be created:
