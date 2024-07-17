@@ -17,7 +17,8 @@ This project not only showcases my technical expertise in IT infrastructure mana
 5. [Multi-factor Authentication](#multi-factor-authentication-mfa)
 6. [Software Deployment](#software-deployment)
 7. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
-8. [Monitoring and Visualization](#monitoring-and-visualization)
+8. [VPN Configuration](#vpn-configuration)
+9. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -782,6 +783,12 @@ To do this, I must perform the following steps:
     ![TeamViewer-6](/images/tw6.PNG)
 
 5. Finally, just share the credentials of the client computer (JMFSOFT-PC01) with the IT Support manager so that he/she can enter them in the TeamViewer client to gain remote access and troubleshoot problems.
+   
+-------------------------------------------------------------------------------------------------
+
+## VPN Configuration
+
+
 
 -------------------------------------------------------------------------------------------------
 
