@@ -829,6 +829,19 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 
 ### Steps to set up a VPN
 
+1. First, I must choose on which server I want to install the role.
+
+    In this case I will choose to install the Remote Access role on the SV02 server.
+    This helps distribute the workload and improves security by not directly exposing the domain controller to external connections.
+
+    To start, I open the Server Manager:
+
+    ![VPN-1](/images/vpn1.PNG)
+
+2. Then, to add the role, I go to “Manage” and then “Add roles and features”:
+
+    ![VPN-2](/images/vpn2.PNG)
+
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
