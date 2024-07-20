@@ -841,7 +841,7 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 2. Then, to add the role, I go to “Manage” and then “Add roles and features”:
 
     ![VPN-2](/images/vpn2.PNG)
-   
+      
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
