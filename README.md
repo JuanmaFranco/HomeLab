@@ -837,11 +837,10 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
     To start, I open the Server Manager:
 
     ![VPN-1](/images/vpn1.PNG)
-
+ 
 2. Then, to add the role, I go to “Manage” and then “Add roles and features”:
 
     ![VPN-2](/images/vpn2.PNG)
-  
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
