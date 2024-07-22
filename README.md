@@ -842,7 +842,7 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 
     ![VPN-2](/images/vpn2.PNG)
 
-                    
+          
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
