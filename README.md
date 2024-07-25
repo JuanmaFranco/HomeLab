@@ -1383,4 +1383,4 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
 TODO: 
   - VPN Config
-  - 
+  - Quota or NTFS permissions configuration
