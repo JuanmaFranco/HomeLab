@@ -842,7 +842,26 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 
     ![VPN-2](/images/vpn2.PNG)
 
-            
+3. Now, I select the “Remote Access” role and install it:
+   
+   ![VPN-3](/images/vpn3.PNG)
+
+4. Then, I select the “DirectAccess and VPN (RAS)” option:
+
+    ![VPN-4](/images/vpn4.PNG)
+
+    * **DirectAccess** es una tecnología de acceso remoto introducida en Windows Server 2008 R2. Permite a los usuarios remotos acceder a los recursos internos de la red sin la necesidad de iniciar manualmente una conexión VPN. DirectAccess establece automáticamente una conexión segura y persistente entre el dispositivo del usuario y la red corporativa, proporcionando una experiencia similar a estar en la oficina.
+     
+    * **VPN** es una tecnología que crea una conexión segura y cifrada a través de una red menos segura, como Internet. La VPN permite a los usuarios remotos acceder a los recursos internos de la red como si estuvieran directamente conectados a ella. 
+
+5. Finally, I review the selected items and confirm that everything is correct to start with the installation of the Remote Access role, so I press “Install”:
+
+    ![VPN-5](/images/vpn5.PNG)
+
+6. Once the installation is complete, a message will be displayed indicating that the installation was successful, but that configuration is required:
+
+    ![VPN-6](/images/vpn6.PNG)
+
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
