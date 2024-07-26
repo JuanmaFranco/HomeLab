@@ -861,7 +861,7 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 6. Once the installation is complete, a message will be displayed indicating that the installation was successful, but that configuration is required:
 
     ![VPN-6](/images/vpn6.PNG)
-
+ 
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
