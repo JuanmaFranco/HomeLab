@@ -861,7 +861,37 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 6. Once the installation is complete, a message will be displayed indicating that the installation was successful, but that configuration is required:
 
     ![VPN-6](/images/vpn6.PNG)
+
+7. Now, it is time to configure the Virtual Private Network (VPN), which will allow remote access to employees in a distant geographical location.
+
+    To do this, I must open the “Introduction Wizard”, which is displayed when I finish installing the “Remote Access” role:
+
+    ![VPN-7](/images/vpn7.PNG)
+
+8. Once the wizard is opened, a window containing 3 options will be displayed:
+
+    ![VPN-8](/images/vpn8.PNG)
+
+    * **Implement DirectAccess and VPN (Recommended)**: Implementing both VPN and DirectAccess offers flexibility, allowing users to choose between automatic (DirectAccess) or manual (VPN) connections based on their needs. This option provides compatibility across various devices and operating systems that do not support DirectAccess, such as macOS and Linux. DirectAccess ensures a seamless and continuous connection to the corporate network, ideal for users who require uninterrupted access. It also enhances security by utilizing multiple authentication and encryption methods. However, managing both technologies can be complex, requiring more time and resources, and DirectAccess requires IPv6, which might necessitate additional network configurations.
+
+    * **Implement DirectAccess only**: Implementing DirectAccess Only provides a transparent connection experience, as users do not need to manually initiate the connection. It allows continuous remote management of devices, even when users are not logged in, and uses IPsec for secure communication with the option for multi-factor authentication. The downside is its limited compatibility, as it only works with Windows devices that support DirectAccess, and it requires IPv6 and additional network configurations.
+  
+    * **Implement VPN only**: Implementing VPN Only offers broad compatibility with various devices and operating systems, including Windows, macOS, Linux, Android, and iOS. It is generally simpler and more straightforward to configure compared to DirectAccess and allows for flexibility in choosing VPN protocols based on security and compatibility needs. However, users must manually initiate the VPN connection each time they need access to the corporate network, and administrators typically cannot manage remote devices when they are not connected to the VPN.
  
+    In this case, I will select the option “**Implement VPN only**”.
+
+9. Once this option is selected, a new window called “Routing and Remote Access” will open.
+    
+    ![VPN-9](/images/vpn9.PNG)
+
+    In this case, you can see by the icon with the red arrow that the service is not currently configured and enabled. 
+
+    To configure it, we right click on it and select the option “Configure and enable Remote Access”:
+
+    ![VPN-10](/images/vpn10.png)
+
+10. 
+
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
