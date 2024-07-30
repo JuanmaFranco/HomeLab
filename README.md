@@ -890,7 +890,27 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 
     ![VPN-10](/images/vpn10.png)
 
-10. 
+10. Once the wizard is opened, a configuration menu opens where I have to choose a combination of services to provide:
+
+    - **Remote Access:** Configures the server to function as a Remote Access Service (RAS), allowing users to connect to the corporate network via dial-up lines or private networks.
+  
+    - **Network Address Translation (NAT):** Configures the server to act as a NAT device, enabling devices on a private network to access the Internet using a single public IP address. NAT hides internal IP addresses, enhancing security and conserving public IP addresses.
+  
+    - **Virtual Private Network (VPN) and NAT access:** Configures the server to provide both VPN and NAT services. This allows remote users to securely connect to the corporate network over the Internet (VPN) and also provides NAT services to manage network traffic between internal and external networks.
+  
+    - **Secure connection between two private networks:** Sets up a secure connection between two distinct networks, allowing them to communicate securely over the Internet. This is ideal for connecting different branches of a company, creating a private virtual network between them.
+  
+    - **Custom configuration:** Allows for detailed configuration of remote access services. You can manually select the specific services you want to configure, such as VPN, NAT, routing, dial-up remote access, etc. This option offers the most flexibility to tailor the setup to specific needs.
+
+    In this case, I select the first option (Remote Access), since I am only interested in providing the VPN service:
+
+    ![VPN-11](/images/vpn11.PNG)
+
+    Then, I select the “VPN” option:
+
+    ![VPN-12](/images/vpn12.PNG)
+
+    
 
 -------------------------------------------------------------------------------------------------
 
