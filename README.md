@@ -910,7 +910,12 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
 
     ![VPN-12](/images/vpn12.PNG)
 
-    
+    Now, I must select the interface that connects the server to the Internet. 
+
+    In this case, it is the “Ethernet” interface, whose IP address is 192.168.1.6:
+
+    ![VPN-13](/images/vpn13.PNG)
+ 
 
 -------------------------------------------------------------------------------------------------
 
