@@ -915,7 +915,69 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
     In this case, it is the “Ethernet” interface, whose IP address is 192.168.1.6:
 
     ![VPN-13](/images/vpn13.PNG)
- 
+
+    Now, I must select whether I want the IP addresses of the computers connecting to the VPN to be assigned automatically (via DHCP) or whether I want an IP address to be chosen from a defined range.
+
+    In this case, I will select the option “From a specified address range”:
+
+    ![VPN-14](/images/vpn14.PNG)
+
+    Next, I create the range of addresses that I will choose to be assigned to those computers that connect to VPN.
+
+    As this is an example case, I will select an agreed range that will only cover 8 IP addresses, from 192.168.1.88 to 192.168.1.95:
+
+    ![VPN-14-2](/images/vpn14-2.PNG)
+
+    Finally, I check that everything is correct and press “Finish”:
+
+    ![VPN-16](/images/vpn16.PNG)
+
+    Once this is done, the VPN server will be running: 
+
+    ![VPN-17](/images/vpn17.PNG)
+
+11. Now, to connect to a VPN from a client computer (in this case, JMFSOFT-PC04), I go to the search bar and type VPN.
+
+    Then, I select the “VPN Configuration” option:
+
+    ![VPN-CLI1](/images/vpncli1.PNG)
+
+    Then, I select the “Add a VPN connection” option:
+
+    ![VPN-CLI2](/images/vpncli2.PNG)
+
+    Then, I fill in the following fields:
+
+    ![VPN-CLI3](/images/vpncli3.PNG)
+    ![VPN-CLI4](/images/vpncli4.PNG)
+
+    Once the fields have been filled in, the connection will be saved.
+
+    All you have to do is click on connect:
+
+    ![VPN-CLI5](/images/vpncli5.PNG)
+    ![VPN-CLI6](/images/vpncli6.PNG)
+
+    As shown in the image, the connection was successful.
+
+
+12. Now, I can verify this as follows:
+
+    From the Client side:
+
+    * I go to CMD or Powershell and type ipconfig /all, and the connection should appear:
+
+      ![VPN-CLI7](/images/vpncli7.PNG)
+
+    From the VPN server side:
+
+    * I go to the “Routing and Remote Access” console, and then to the “Remote Access Clients” section.
+
+      This section should list all the client computers connected to the VPN:
+
+      ![VPN-CLI8](/images/vpncli8.PNG)
+
+This concludes the VPN server configuration.
 
 -------------------------------------------------------------------------------------------------
 
