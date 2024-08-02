@@ -978,7 +978,7 @@ Implementing VPNs is a best practice for its ability to provide a secure and pri
       ![VPN-CLI8](/images/vpncli8.PNG)
 
 This concludes the VPN server configuration.
-
+  
 -------------------------------------------------------------------------------------------------
 
 ## Monitoring and Visualization
