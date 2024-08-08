@@ -376,8 +376,18 @@ Steps to follow for Microsoft 365 setup:
 
     ![M365-1](/images/m365-1.PNG)
 
-2.
+2. To test this, I will use the monthly trial version.
 
+    Then, I select the number of users I will have to manage. <br/>
+    In this case, I indicate that I will use 25 users:
+
+    ![M365-2](/images/m365-2.PNG)
+
+    Then, I select the user name, the company domain (in this case, JMFSoftCorp) and the password for that user: 
+
+    ![M365-3](/images/m365-3.PNG)
+
+    Finally, I review the payment information, and confirm.
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
