@@ -366,7 +366,17 @@ Microsoft 365 offers an integrated, cloud-based approach to productivity and col
 
 Knowing Microsoft 365 is essential for anyone in a Help Desk position. In today’s business environment, many organizations rely on the applications and services offered by Microsoft 365 for their daily operations. These tools go beyond simple office applications, integrating advanced functionalities that enhance collaboration, productivity, and cloud information management.
 
+Steps to follow for Microsoft 365 setup:
 
+1. Microsoft 365 can be obtained from the following link: [https://www.microsoft.com/es-es/microsoft-365/](https://www.microsoft.com/es-es/microsoft-365/)
+
+    From that page, you can see the different plans available and the prices of each one.
+
+    In this case, I will get an enterprise version, more specifically the following: Microsoft 365 Enterprise Premium.
+
+    ![M365-1](/images/m365-1.PNG)
+
+2.
 
 -------------------------------------------------------------------------------------------------
 
