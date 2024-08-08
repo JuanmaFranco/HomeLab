@@ -388,6 +388,8 @@ Steps to follow for Microsoft 365 setup:
     ![M365-3](/images/m365-3.PNG)
 
     Finally, I review the payment information, and confirm.
+
+3.  
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
