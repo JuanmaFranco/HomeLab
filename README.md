@@ -389,7 +389,14 @@ Steps to follow for Microsoft 365 setup:
 
     Finally, I review the payment information, and confirm.
 
-3.  
+3. Once this is done, I go to the Microsoft 365 Admin Center and get the following interface:
+
+    ![M365-4](/images/m365-4.PNG)
+
+    Now, I need to acquire the licenses within the menu called Marketplace:
+
+    ![M365-5](/images/m365-5.PNG)    
+
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
@@ -1500,7 +1507,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
     - **Windows 10**: Set up as client machines.  
     
-      ![Windows-10](/images/windows10-logo.png)
+      ![Windows-10](/images/windows10-logo.jpg)
 
     - **Linux (Debian)**: Configured for monitoring and visualization.
 
