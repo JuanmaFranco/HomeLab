@@ -11,14 +11,17 @@ This project not only showcases my technical expertise in IT infrastructure mana
 # Table of Contents
 
 1. [Homelab Creation](#homelab-creation)
+   1. [Organizational Units (OUs) for Departments](#organizational-units-ous-for-departments)
+   2. [Summary of Steps](#summary-of-steps)
 2. [User and Group Creation](#user-and-group-creation)
 3. [Microsoft 365 Integration and Management](#microsoft-365-integration-and-management)
+   1. [Acquire Microsoft 365 for the company](#acquire-microsoft-365-for-the-company)
 4. [Group Policy Management and Implementation](#group-policy-management-and-implementation)
 5. [Password Reset](#password-reset)
 6. [Multi-factor Authentication](#multi-factor-authentication-mfa)
 7. [Software Deployment](#software-deployment)
 8. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
-9. [VPN Configuration](#vpn-configuration)
+9.  [VPN Configuration](#vpn-configuration)
 10. [Monitoring and Visualization](#monitoring-and-visualization)
 
 -----------------------------------------------------------------------------------------------------
@@ -366,6 +369,8 @@ Microsoft 365 offers an integrated, cloud-based approach to productivity and col
 
 Knowing Microsoft 365 is essential for anyone in a Help Desk position. In today’s business environment, many organizations rely on the applications and services offered by Microsoft 365 for their daily operations. These tools go beyond simple office applications, integrating advanced functionalities that enhance collaboration, productivity, and cloud information management.
 
+### Acquire Microsoft 365 for the company
+
 Steps to follow for Microsoft 365 setup:
 
 1. Microsoft 365 can be obtained from the following link: [https://www.microsoft.com/es-es/microsoft-365/](https://www.microsoft.com/es-es/microsoft-365/)
@@ -410,6 +415,7 @@ Steps to follow for Microsoft 365 setup:
     Once this is done, the product and the 25 corresponding licenses are acquired, which will then be assigned to users according to their role in the company:
 
     ![M365-8](/images/m365-8.PNG)
+
 
 
 -------------------------------------------------------------------------------------------------
