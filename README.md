@@ -11,18 +11,16 @@ This project not only showcases my technical expertise in IT infrastructure mana
 # Table of Contents
 
 1. [Homelab Creation](#homelab-creation)
-   1. [Organizational Units (OUs) for Departments](#organizational-units-ous-for-departments)
-   2. [Summary of Steps](#summary-of-steps)
 2. [User and Group Creation](#user-and-group-creation)
 3. [Microsoft 365 Integration and Management](#microsoft-365-integration-and-management)
-   1. [Acquire Microsoft 365 for the company](#acquire-microsoft-365-for-the-company)
 4. [Group Policy Management and Implementation](#group-policy-management-and-implementation)
 5. [Password Reset](#password-reset)
 6. [Multi-factor Authentication](#multi-factor-authentication-mfa)
 7. [Software Deployment](#software-deployment)
 8. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
-9.  [VPN Configuration](#vpn-configuration)
+9. [VPN Configuration](#vpn-configuration)
 10. [Monitoring and Visualization](#monitoring-and-visualization)
+11. [Project Conclusion](#project-conclusion)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -416,6 +414,42 @@ Steps to follow for Microsoft 365 setup:
 
     ![M365-8](/images/m365-8.PNG)
 
+
+### Microsoft 365 User Creation
+
+Steps to follow to create users in Microsoft 365:
+
+1. First, I go to the Microsoft 365 Administration Center.
+
+    Then, on the left panel, go to the Active Users section:
+
+    ![M365-9](/images/m365-9.PNG)
+
+    Once inside, select the "Create user" option:
+
+    ![M365-10](/images/m365-10.PNG)
+
+    Then, I fill in the fields, indicating first name, last name, display name (which will appear in the list of active users) and the user name, with which the user will log in:
+
+    ![M365-11](/images/m365-11.PNG)
+
+    Once this is done, a very important step follows, which will be to assign the license to the user (in this case, Microsoft 365 Standard Enterprise) and the applications that can be used from it.
+
+    For example, this is the section where the user will be assigned and allowed/blocked access to a certain program (e.g. Teams):
+
+    ![M365-12](/images/m365-12.PNG)
+
+    Then, in the optional configuration section, you configure whether you want the user to be a "normal" user or an administrator user.
+
+    If so, you will choose what type of administrator user it is, such as: Sharepoint Administrator, Exchange Administrator, Teams Administrator or Global Administrator if you want to give unlimited access to all features:
+
+    ![M365-13](/images/m365-13.PNG)
+
+    Finally, it remains to confirm that all the data is correct and finish with the user creation.
+    
+    ![M365-14](/images/m365-14.PNG)
+
+    ![M365-15](/images/m365-15.PNG)
 
 
 -------------------------------------------------------------------------------------------------
