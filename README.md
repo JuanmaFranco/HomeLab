@@ -372,7 +372,7 @@ Steps to follow for Microsoft 365 setup:
 
     From that page, you can see the different plans available and the prices of each one.
 
-    In this case, I will get an enterprise version, more specifically the following: Microsoft 365 Enterprise Premium.
+    In this case, I will get an enterprise version, more specifically the following: Microsoft 365 Enterprise Standard.
 
     ![M365-1](/images/m365-1.PNG)
 
@@ -389,7 +389,7 @@ Steps to follow for Microsoft 365 setup:
 
     Finally, I review the payment information, and confirm.
 
-3. Once this is done, I go to the Microsoft 365 Admin Center and get the following interface:
+3. Once this is done, I go to the **Microsoft 365 Admin Center** and get the following interface:
 
     ![M365-4](/images/m365-4.PNG)
 
@@ -397,6 +397,11 @@ Steps to follow for Microsoft 365 setup:
 
     ![M365-5](/images/m365-5.PNG)    
 
+    Then, I choose the desired plan (in this case, Microsoft 365 Enterprise Standard) and correctly verify the number of licenses. In this case, I will opt for the option that says 'Trial' since I only want to use the trial version for practice purposes, but in a business environment, I would probably choose another option.
+
+    Once everything is confirmed, I click on 'Start your free trial':
+
+    
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
