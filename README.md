@@ -398,10 +398,20 @@ Steps to follow for Microsoft 365 setup:
     ![M365-5](/images/m365-5.PNG)    
 
     Then, I choose the desired plan (in this case, Microsoft 365 Enterprise Standard) and correctly verify the number of licenses. In this case, I will opt for the option that says 'Trial' since I only want to use the trial version for practice purposes, but in a business environment, I would probably choose another option.
-
+    
+    ![M365-6](/images/m365-6.PNG)
+    
     Once everything is confirmed, I click on 'Start your free trial':
 
-    
+    ![M365-7](/images/m365-7.PNG)
+
+    And finally, I click on 'Place order'.
+
+    Once this is done, the product and the 25 corresponding licenses are acquired, which will then be assigned to users according to their role in the company:
+
+    ![M365-8](/images/m365-8.PNG)
+
+
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
