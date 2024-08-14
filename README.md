@@ -452,6 +452,27 @@ Steps to follow to create users in Microsoft 365:
     ![M365-15](/images/m365-15.PNG)
 
 
+### Microsoft 365 License Management
+
+Steps to follow to manage Microsoft 365 licenses for a given user:
+
+1. First, you must choose the user to whom certain licenses will be configured. <br/>
+In this case I will choose to modify the licenses for the user “Lara Vega”, so I go to “Active users” and click on that user.
+
+    Then, click on “Licenses and applications”:
+    
+    ![M365-16](/images/m365-16.PNG)
+
+2. Once I am inside this section, I have the licenses and applications available at my disposal.
+
+    I can change the type of license (in this case no, because I only have a Microsoft 365 Standard Enterprise) and below the type of applications that the user can use (e.g. Teams, Sharepoint, etc).
+
+    ![M365-17](/images/m365-17.PNG)
+
+    ![M365-18](/images/m365-18.PNG)
+
+3. Then, just select the licenses and applications and click on “Save changes”.
+   
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
