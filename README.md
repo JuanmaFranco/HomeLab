@@ -236,7 +236,7 @@ Although we are creating only four virtual machines to simulate end-user worksta
     - **Phone:** (555) 123-4577
     - **Department:** Sales
     - **Location:** Miami
- 
+  
 18. **Rachel Adams**
     - **Username:** radams
     - **Occupation:** Finance Analyst
