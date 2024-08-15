@@ -473,6 +473,11 @@ In this case I will choose to modify the licenses for the user “Lara Vega”, 
 
 3. Then, just select the licenses and applications and click on “Save changes”.
    
+
+### Microsoft 365 Group Creation
+
+
+
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
