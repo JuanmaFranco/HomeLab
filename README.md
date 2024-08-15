@@ -476,7 +476,47 @@ In this case I will choose to modify the licenses for the user “Lara Vega”, 
 
 ### Microsoft 365 Group Creation
 
+Before going straight to the creation of groups, it is a good idea to define the different types of groups available in Microsoft 365 and the characteristics of each one.
 
+* **Microsoft 365 Group**: A collaborative group that allows shared access to resources like Outlook, Teams, SharePoint, and more. It is fully compatible with all Microsoft 365 applications, is assigned an email address, and can integrate with Azure Active Directory for security management.
+
+* **Distribution List**: Used to send emails to multiple recipients simultaneously. It is not compatible with Microsoft 365 applications and is only used for email distribution. It does not offer additional security features.
+
+* **Security Group**: Designed to control access to resources within Microsoft 365 through roles and permissions. It is not compatible with Microsoft 365 applications and does not have an email address assigned. It offers strict access control to resources.
+
+* **Mail-Enabled Security Group**: Similar to a security group but also allows sending emails to its members. It is not compatible with Microsoft 365 applications, but it is assigned an email address and offers strict access control to resources.
+  
+Once you understand the differences between each type of group, it is proper to continue with the steps to create them.
+
+Steps to follow for the creation of groups in Microsoft 365:
+
+1. First, I go to the Microsoft 365 Administration Center.
+
+    Then, on the left panel, go to the Active groups and teams section:
+
+    ![M365-19](/images/m365-19.PNG)
+
+2. Then, once inside the “Active groups and teams” panel, we first go to the section where the type of group we want to create is located (1) and then we choose the option “Create Microsoft 365 group / distribution list / security group” (2):
+
+    ![M365-20](/images/m365-20.PNG)
+
+3. Then, we fill in the following data:
+
+   - Group name and description
+   - Owner/s of the group 
+   - Group members 
+   - Email (shared) of the group
+   - If the group is public or private
+   - If I want to connect Microsoft Teams to the group
+
+    ![M365-21](/images/m365-21.PNG)
+    ![M365-22](/images/m365-22.PNG)
+    ![M365-23](/images/m365-23.PNG)
+    ![M365-24](/images/m365-24.PNG)
+
+    Once this is done, the group is successfully created:
+
+    ![M365-25](/images/m365-25.PNG)
 
 -------------------------------------------------------------------------------------------------
 
