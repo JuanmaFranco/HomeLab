@@ -518,6 +518,52 @@ Steps to follow for the creation of groups in Microsoft 365:
 
     ![M365-25](/images/m365-25.PNG)
 
+
+### Microsoft 365 Shared Mailbox creation
+
+Defining a shared mailbox in an organization provides a cost-effective way for multiple users to manage and collaborate on emails from a single, centralized address, ensuring consistent communication and streamlined workflows, while also offering access to shared calendars and contacts without the need for additional Microsoft 365 licenses.
+
+Differences between a shared mailbox and a distribution list:
+
+  ![SharedMailboxVsDistributionList](/images/sharedmailbox01.PNG)
+
+- **Shared Mailbox**: A shared mailbox is an actual mailbox that multiple users can access to send, receive, and manage emails from a single, centralized address (e.g., support@company.com). Users can log in and interact with the mailbox, and emails sent from the shared mailbox appear to come from that shared address. It also includes shared calendars and contacts that all members can use.
+
+- **Distribution List**: A distribution list is a group of email addresses that acts as a forwarding mechanism. When an email is sent to the distribution list's address, it is automatically forwarded to all members of the list, but the list itself does not store emails. Unlike a shared mailbox, members cannot reply from the distribution list’s address; responses come from their individual email addresses.
+
+A shared mailbox can be created from either the Microsoft 365 Admin Center or the Exhange Admin Center.
+In this case, I will create it from the Microsoft 365 Admin Center.
+
+Steps to follow to create a shared mailbox:
+
+1. First, we go to the Microsoft 365 administration center, and then to the Teams and Groups section.
+
+    Once there, we go to the “Shared Mailbox” section:
+
+    ![SharedMailbox02](/images/sharedmailbox02.PNG)
+
+2. Then, click on “Add a shared mailbox” and fill in the fields with the necessary data (name and email address of the Shared Mailbox):
+   
+    ![SharedMailbox03](/images/sharedmailbox03.PNG)
+
+    Finally, we click on “Save Changes”.
+
+3. Once the Shared Mailbox is created, I can click on it and define who the members of the Shared Mailbox are, and also what permissions each one has.
+
+    ![SharedMailbox04](/images/sharedmailbox04.PNG)
+
+    In this case, I added 2 random members (Bob Smith and Carol Davis).
+
+    In the permissions section, we find 3 options:
+
+    1. **Read and Manage Permissions**: This permission, also known as "Full Access," allows a user to open the shared mailbox and view, read, delete, move, and organize emails, contacts, calendars, and other items within the mailbox. However, it does not allow the user to send emails from the shared mailbox unless additional send permissions are granted.
+   
+        Example: A user with Read and Manage permissions can log into the shared mailbox "support@company.com," review incoming support tickets, organize them into folders, delete spam, and archive old messages.
+
+    2. **Send As Permissions**:   
+
+
+
 -------------------------------------------------------------------------------------------------
 
 ## Group Policy Management and Implementation
