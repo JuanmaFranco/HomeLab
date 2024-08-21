@@ -576,7 +576,7 @@ Recovering files from OneDrive is crucial for a Help Desk Jr. because it allows 
 In this case, to demonstrate file recovery, I will simulate that the user Lara Vega has created 2 files (Test and Test_Excel) and accidentally deleted them.
 
 ![OneDrive](/images/onedrive1.PNG)
-
+ 
 
 
 -------------------------------------------------------------------------------------------------
