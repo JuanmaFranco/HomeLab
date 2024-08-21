@@ -560,7 +560,13 @@ Steps to follow to create a shared mailbox:
    
         Example: A user with Read and Manage permissions can log into the shared mailbox "support@company.com," review incoming support tickets, organize them into folders, delete spam, and archive old messages.
 
-    2. **Send As Permissions**:   
+    2. **Send As Permissions**: This permission allows a user to send emails as the shared mailbox itself. When the user sends an email, it will appear as if the email was sent directly from the shared mailbox's email address, without indicating who specifically sent it.
+   
+        Example: A user with Send As permissions can send an email from "support@company.com," and the recipient will see the email as coming directly from "support@company.com," with no indication of the individual sender's name.
+
+    3. **Send on Behalf Permissions**: This permission allows a user to send emails on behalf of the shared mailbox. The email will show the shared mailbox’s address, but it will also indicate the name of the individual who sent the email on behalf of the shared mailbox.
+
+        Example: If a user has Send on Behalf permissions for "support@company.com" and sends an email, the recipient will see it as coming from "John Doe on behalf of support@company.com," clearly indicating who sent the message.
 
 
 
