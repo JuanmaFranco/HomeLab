@@ -569,6 +569,15 @@ Steps to follow to create a shared mailbox:
         Example: If a user has Send on Behalf permissions for "support@company.com" and sends an email, the recipient will see it as coming from "John Doe on behalf of support@company.com," clearly indicating who sent the message.
 
 
+### Microsoft 365 File Recovery
+
+Recovering files from OneDrive is crucial for a Help Desk Jr. because it allows them to quickly resolve common issues where users accidentally delete or lose important files, ensuring minimal disruption to productivity, improving user satisfaction, and demonstrating a strong understanding of cloud storage management in the organization.
+
+In this case, to demonstrate file recovery, I will simulate that the user Lara Vega has created 2 files (Test and Test_Excel) and accidentally deleted them.
+
+![OneDrive](/images/onedrive1.PNG)
+
+
 
 -------------------------------------------------------------------------------------------------
 
