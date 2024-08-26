@@ -527,9 +527,9 @@ Differences between a shared mailbox and a distribution list:
 
   ![SharedMailboxVsDistributionList](/images/sharedmailbox01.PNG)
 
-- **Shared Mailbox**: A shared mailbox is an actual mailbox that multiple users can access to send, receive, and manage emails from a single, centralized address (e.g., support@company.com). Users can log in and interact with the mailbox, and emails sent from the shared mailbox appear to come from that shared address. It also includes shared calendars and contacts that all members can use.
-
 - **Distribution List**: A distribution list is a group of email addresses that acts as a forwarding mechanism. When an email is sent to the distribution list's address, it is automatically forwarded to all members of the list, but the list itself does not store emails. Unlike a shared mailbox, members cannot reply from the distribution list’s address; responses come from their individual email addresses.
+  
+- **Shared Mailbox**: A shared mailbox is an actual mailbox that multiple users can access to send, receive, and manage emails from a single, centralized address (e.g., support@company.com). Users can log in and interact with the mailbox, and emails sent from the shared mailbox appear to come from that shared address. It also includes shared calendars and contacts that all members can use.
 
 A shared mailbox can be created from either the Microsoft 365 Admin Center or the Exhange Admin Center.
 In this case, I will create it from the Microsoft 365 Admin Center.
