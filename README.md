@@ -573,11 +573,50 @@ Steps to follow to create a shared mailbox:
 
 Recovering files from OneDrive is crucial for a Help Desk Jr. because it allows them to quickly resolve common issues where users accidentally delete or lose important files, ensuring minimal disruption to productivity, improving user satisfaction, and demonstrating a strong understanding of cloud storage management in the organization.
 
-In this case, to demonstrate file recovery, I will simulate that the user Lara Vega has created 2 files (Test and Test_Excel) and accidentally deleted them.
+In this case, to demonstrate file recovery, I will simulate that the user Lara Vega has created 2 files (Prueba and Prueba Excel) and accidentally deleted them.
 
 ![OneDrive](/images/onedrive1.PNG)
  
+Now, to simulate a real environment, I will create a ticket that simulates the request for help to restore those deleted files (Prueba & Prueba Excel):
 
+![OneDrive2](/images/onedrive2.PNG)
+
+Once I have assigned the ticket to myself, and changed the status to “In progress”, I proceed to perform the following steps to resolve it:
+
+1. First, I go to the Sharepoint Administration Center and then, I click on “More features” on the left panel:
+
+    ![OneDrive3](/images/onedrive3.PNG)
+
+2. Once pressed, I go to the first section (User Profiles), and click on “Open”:
+
+    ![OneDrive4](/images/onedrive4.PNG)
+
+3. Then, within the “User Profiles” menu, select the “Manage User Profiles” option:
+   
+    ![OneDrive5](/images/onedrive5.PNG)
+
+4. Now, within that section, I use the search engine to locate the user who deleted the files. 
+In this case, the user is Lara Vega, so I proceed to locate her:
+
+    ![OneDrive6](/images/onedrive6.PNG)
+
+    Once I have located the user, I use the dropdown that appears when I place the mouse on the “Account name” column, and choose the “Manage personal site” option:
+
+    ![OneDrive7](/images/onedrive7.PNG)
+
+5. Finally, I select the recycle garbage can, but not before confirming that I am in the OneDrive of the desired user at the top left (Lara Vega's name appears): 
+   
+    ![OneDrive8](/images/onedrive8.PNG)
+
+6. Once all these steps have been followed, I have access to the recycle garbage can of the desired user, so I can simply select the files I want to restore and click on “Restore” (1):
+
+    ![OneDrive9](/images/onedrive9.PNG)
+
+    If Lara Vega or someone else has deleted the files from the recycle bin, we will be able to recover them from the second level recycle bin (2), which "saves" us in these situations.
+
+    If they have been deleted from the second level recycle bin, there is not much to do, but a lot of actions have to be performed for this to happen, so it is likely that such a scenario was intended.
+
+<br/>
 
 -------------------------------------------------------------------------------------------------
 
