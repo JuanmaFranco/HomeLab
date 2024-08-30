@@ -1710,7 +1710,7 @@ To integrate Zabbix with Grafana, I perform the following steps:
 
 ### **Project Overview**:
 
-This project demonstrates my capabilities in setting up and managing a comprehensive IT environment, essential for a role as an IT Support Specialist or Help Desk Jr/Trainee. The core of the project is the creation of a homelab that simulates real-world IT infrastructure, showcasing a range of skills from system administration to network monitoring and user support.
+This project demonstrates my capabilities in setting up and managing a comprehensive IT environment, essential for a role as an IT Support Specialist or Help Desk Jr/Trainee. The core of the project is the creation of a homelab that simulates real-world IT infrastructure, showcasing a range of skills from system administration to network monitoring, user support, and cloud-based services.
 
 ### **Tools and Technologies Used**:
 
@@ -1752,7 +1752,13 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
     - **ADUC (Active Directory Users and Computers)** and **ADAC (Active Directory Administrative Center)**: Employed for detailed management of the AD environment.  
 
-5. **Monitoring and Visualization**:
+5. **Cloud Services**:
+   
+    - **Microsoft 365**: Implemented and managed user accounts, licenses, and shared mailboxes. Configured services like Exchange, SharePoint, and OneDrive, including recovery of deleted files and mailbox management.
+
+      ![Microsoft-365](/images/m365-logo.png)
+
+6. **Monitoring and Visualization**:
    
     - **Zabbix**: Installed on a Linux VM for network and system monitoring.
   
@@ -1762,11 +1768,21 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 
       ![Grafana](/images/grafana-logo.jpg)
 
-6. **Ticketing System**:
+7. **Ticketing System**:
    
     - **Jira Service Management (JSM)**: Adopted to simulate real-world IT ticketing and service management.
 
       ![Jira Service Management](/images/jsm-logo.jpg)
+
+8. **Remote Access and Support**:
+  
+    - **TeamViewer**: Integrated for remote access and support capabilities, facilitating troubleshooting and user assistance.
+
+      ![TeamViewer](/images/teamviewer-logo2.jpg)
+
+9.  **VPN Configuration**:
+    
+    - **Remote Access Role (Windows Server)**: Set up a VPN to allow secure remote access to the network, including the configuration of roles and client connectivity.
    
 
 ### Key Project Components:
@@ -1785,28 +1801,38 @@ This project demonstrates my capabilities in setting up and managing a comprehen
   
 3. **Cloud Identity and Security**:
 
-    - Established Azure Active Directory and synchronized it with the on-premises AD environment.
+    - Established and configured Azure Active Directory (Azure AD) for cloud-based identity management.
     - Created and managed cloud-based user accounts and groups.
     - Enabled Multi-Factor Authentication (MFA) for added security on Azure AD.
 
 4. **System and Software Management**:
 
     - Utilized PDQ Deploy for centralized software deployment across all Windows clients, demonstrating proficiency in remote software management.
-    - Configured and managed Windows Server roles and features, including DNS, DHCP, and File Services.
+    - Configured and managed Windows Server roles and features, including DNS, DHCP, and Remote Access.
 
-5. **Network Monitoring and Visualization**:
+5. **Microsoft 365 Administration:**:
+    
+    - Managed Microsoft 365 services, including user accounts, license assignments, and group configurations.
+    - Administered Exchange Online for mailbox management, and implemented SharePoint and OneDrive for file storage and collaboration.
+    - Executed recovery operations for deleted files and mailboxes.
+
+6. **Network Monitoring and Visualization**:
 
     - Installed and configured Zabbix for comprehensive monitoring of all VMs.
     - Set up Grafana dashboards to visualize monitoring data, providing insights into system performance and health.
 
-6. **IT Service Management**:
+7. **IT Service Management**:
 
     - Implemented Jira Service Management (JSM) as a ticketing system to simulate handling IT support requests.
     - Managed and resolved simulated tickets, reflecting typical IT support tasks like password resets, software installations, and system troubleshooting.
 
-7. **Remote Access and Support**:
+8. **Remote Access and Support**:
 
     - Integrated tools like TeamViewer and AnyDesk for remote access and support capabilities.
     - Demonstrated proficiency in using these tools to resolve user issues remotely, enhancing support efficiency.
+
+9. **VPN Configuration**:
+    
+    - Configured a VPN to provide secure remote access to network resources, including role-based access controls and client setup.
   
 -------------------------------------------------------------------------------------------------
