@@ -283,6 +283,12 @@ Therefore, once I have created all the requested users, I can mark the ticket as
 
 ![Ticket2](/images/ticket2.PNG)
 
+### User creation through Powershell
+
+Using PowerShell to create users in Active Directory offers key advantages like automation, allowing repetitive tasks to be performed quickly and consistently, ensuring uniformity across the organization. It also provides scalability, making it efficient to manage large numbers of users, and flexibility to customize attributes during creation, all of which help streamline user management in enterprise environments.
+
+
+
 ### User creation through Azure Active Directory (currently Microsoft Entra ID)
 
 In addition to managing Active Directory on-premises, you can use the cloud version, which is Azure Active Directory, currently known as Microsoft Entra ID.
