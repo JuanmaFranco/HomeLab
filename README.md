@@ -287,7 +287,14 @@ Therefore, once I have created all the requested users, I can mark the ticket as
 
 Using PowerShell to create users in Active Directory offers key advantages like automation, allowing repetitive tasks to be performed quickly and consistently, ensuring uniformity across the organization. It also provides scalability, making it efficient to manage large numbers of users, and flexibility to customize attributes during creation, all of which help streamline user management in enterprise environments.
 
+To perform a mass creation of users using Powershell, I must perform the following steps:
 
+1. First, I am going to create a file with .csv (Comma-Separated Value) extension, which will contain the users that I am going to add to Active Directory using Powershell.
+
+    This file, as the name of the extension indicates, will separate each Active Directory attribute by commas (,).
+
+    ![Pwsh1](/images/pwsh1.PNG)
+    
 
 ### User creation through Azure Active Directory (currently Microsoft Entra ID)
 
