@@ -20,7 +20,8 @@ This project not only showcases my technical expertise in IT infrastructure mana
 8. [Remote Access and Troubleshooting](#remote-access-and-troubleshooting)
 9. [VPN Configuration](#vpn-configuration)
 10. [Monitoring and Visualization](#monitoring-and-visualization)
-11. [Project Conclusion](#project-conclusion)
+11. [Task Automation with PowerShell](#task-automation-with-powershell)
+12. [Project Conclusion](#project-conclusion)
 
 -----------------------------------------------------------------------------------------------------
 
@@ -282,21 +283,6 @@ Finally, once the ticket is resolved (with all the users created), I get the fol
 Therefore, once I have created all the requested users, I can mark the ticket as resolved and additionally leave a message for the user who initiated it, indicating that all the users have been successfully created. 
 
 ![Ticket2](/images/ticket2.PNG)
-
-### User creation through Powershell
-
-Using PowerShell to create users in Active Directory offers key advantages like automation, allowing repetitive tasks to be performed quickly and consistently, ensuring uniformity across the organization. It also provides scalability, making it efficient to manage large numbers of users, and flexibility to customize attributes during creation, all of which help streamline user management in enterprise environments.
-
-To perform a mass creation of users using Powershell, I must perform the following steps:
-
-1. First, I am going to create a file with .csv (Comma-Separated Value) extension, which will contain the users that I am going to add to Active Directory using Powershell.
-
-    This file, as the name of the extension indicates, will separate each Active Directory attribute by commas (,).
-
-    ![Pwsh1](/images/pwsh1.PNG)
-   
-    
-2. 
 
 ### User creation through Azure Active Directory (currently Microsoft Entra ID)
 
@@ -1041,7 +1027,7 @@ This concept is fundamental in day-to-day IT support, since it is a required ski
 There are many tools on the market that facilitate remote access, such as TeamViewer or AnyDesk.
 Even Windows comes with a tool built into the operating system itself, but for reasons of versatility I will use TeamViewer because it works on many operating systems and it is also my tool of choice, but I could easily use AnyDesk, which also has a very simple interface, less resource consumption and lower licensing costs.
 
-![Teamviewer-Logo](/images/teamviewer-logo.png)
+![Teamviewer-Logo](/images/teamviewer-logo2.jpg)
 
 In this case, the connection will be made from the SV02 machine to the JMFSOFT-PC01 client machine.
 
@@ -1719,6 +1705,53 @@ To integrate Zabbix with Grafana, I perform the following steps:
 
     ![Grafana25](/images/grf25.PNG) <br/>
 
+-------------------------------------------------------------------------------------------------
+
+## Task Automation with PowerShell
+
+PowerShell is a valuable tool for automating tasks in a Help Desk role because it saves time and reduces manual work. Instead of performing repetitive tasks like resetting passwords or creating user accounts one by one, you can automate these processes with scripts, completing them in seconds. This not only speeds up your workflow but also allows you to handle more requests in less time.
+
+Automating with PowerShell also ensures consistency and reduces human error. When tasks are done manually, there’s always a risk of mistakes, but a well-written script guarantees the same accurate result every time. This makes PowerShell an essential tool for ensuring that systems are properly managed and maintained.
+
+Additionally, PowerShell offers flexibility, allowing you to manage different aspects of IT, from Active Directory to software deployment, making it a versatile solution for a wide range of tasks.
+
+![Powershell-logo](/images/powershell-logo.jpg)
+
+### Bulk User creation through Powershell
+
+Using PowerShell to create users in Active Directory offers key advantages like automation, allowing repetitive tasks to be performed quickly and consistently, ensuring uniformity across the organization. It also provides scalability, making it efficient to manage large numbers of users, and flexibility to customize attributes during creation, all of which help streamline user management in enterprise environments.
+
+To perform a mass creation of users using Powershell, I must perform the following steps:
+
+1. First, I am going to create a file with .csv (Comma-Separated Value) extension, which will contain the users that I am going to add to Active Directory using Powershell.
+
+    This file, as the name of the extension indicates, will separate each Active Directory attribute by commas (,).
+
+    ![Pwsh1](/images/pwsh1.PNG)
+   
+    
+2. Now, I must prepare the script that imports that .csv file, and run the command that creates the users in Active Directory based on that file.
+
+    First, I import the CSV file. 
+
+    Then, I create some variables that will be useful to pass as parameters to the command that will create the users. 
+
+    In this case, for testing purposes, all users will go to the same OU, and the domain will be one created on a Windows Server 2016 server, named 'adatum.local'.
+
+    ![Pwsh2](/images/pwsh2.PNG)
+
+
+3. Once the .csv file is loaded in the $users variable, I proceed to go through each one of the users and for each one of them (forEach), I save their data in variables and pass them to the New-ADUser object, which will create the users.
+
+    ![Pwsh3](/images/pwsh3.PNG)
+
+    The console result is as follows:
+
+    ![Pwsh4](/images/pwsh4.PNG)
+
+    And the result of executing the script in Active Directory is this (the user 'Juanma' was already created): 
+
+    ![Pwsh5](/images/pwsh5.PNG)
 -------------------------------------------------------------------------------------------------
 
 ## Project Conclusion
