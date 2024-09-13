@@ -1752,6 +1752,18 @@ To perform a mass creation of users using Powershell, I must perform the followi
     And the result of executing the script in Active Directory is this (the user 'Juanma' was already created): 
 
     ![Pwsh5](/images/pwsh5.PNG)
+
+
+### Bulk User Disabling through Powershell
+
+To disable users in Powershell, the command 'Disable-ADAccount' is used.
+
+In this case, I will disable those users that belong to the 'IT' department.
+
+The script is simple, since the command only receives the user's identity.
+
+![Pwsh6](/images/pwsh6.PNG)
+
 -------------------------------------------------------------------------------------------------
 
 ## Project Conclusion
