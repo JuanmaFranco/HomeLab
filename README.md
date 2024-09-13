@@ -294,7 +294,9 @@ To perform a mass creation of users using Powershell, I must perform the followi
     This file, as the name of the extension indicates, will separate each Active Directory attribute by commas (,).
 
     ![Pwsh1](/images/pwsh1.PNG)
+   
     
+2. 
 
 ### User creation through Azure Active Directory (currently Microsoft Entra ID)
 
