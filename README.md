@@ -1844,6 +1844,7 @@ This project demonstrates my capabilities in setting up and managing a comprehen
     
     - **Remote Access Role (Windows Server)**: Set up a VPN to allow secure remote access to the network, including the configuration of roles and client connectivity.
    
+      ![VPN](/images/vpn-logo.jpg)
 
 ### Key Project Components:
 
