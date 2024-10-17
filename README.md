@@ -1,6 +1,6 @@
 # IT Support and Administration Home Lab - Personal Project
 
-![Home Lab Image](images/homelab.jpg)
+![Home Lab Logo](/images/homelab-logo.PNG)
 
 Welcome to my comprehensive IT infrastructure project, where I have meticulously designed and implemented a homelab environment integrating Active Directory solutions, both on-premises and in the cloud through Azure Active Directory. This project highlights my proficiency in deploying and managing complex IT systems, utilizing a range of tools and skills to ensure robust operational capabilities.
 
@@ -1288,8 +1288,7 @@ In this section, I will install and integrate two programs, **Zabbix and Grafana
 
 - **Learning and Experimentation**: Implementing Zabbix and Grafana will provide hands-on experience in setting up, configuring, and utilizing monitoring and data visualization technologies, which are critical skills for IT management and cybersecurity.
 
-![Zabbix Logo](/images/zabbix-logo.png)
-![Grafana Logo](/images/grafana-logo.jpg)
+![Zabbix Logo](/images/zabbix-logo.png)![Grafana Logo](/images/grafana-logo.jpg)
 
 To monitor the machines, I will use the Linux operating system, specifically the Debian 12.5 distro, on which I will install Zabbix and Grafana, tools for monitoring and data visualization respectively.
 
@@ -1846,6 +1845,12 @@ This project demonstrates my capabilities in setting up and managing a comprehen
    
       ![VPN](/images/vpn-logo.jpg)
 
+10. **Task Automation**:
+
+    - **Powershell**: PowerShell scripts were used to automate key tasks such as bulk user creation and bulk user disabling in Active Directory, improving efficiency and consistency across the project.
+
+      ![Powershell](/images/powershell-logo.jpg)
+
 ### Key Project Components:
 
 1. **Homelab Setup**:
@@ -1895,5 +1900,9 @@ This project demonstrates my capabilities in setting up and managing a comprehen
 9. **VPN Configuration**:
     
     - Configured a VPN to provide secure remote access to network resources, including role-based access controls and client setup.
+
+10. **Task Automation with Powershell**:
+
+    - Automated key tasks such as bulk user creation and bulk user disabling in Active Directory, reducing manual intervention and improving efficiency.
   
 -------------------------------------------------------------------------------------------------
