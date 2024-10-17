@@ -1,6 +1,6 @@
 # IT Support and Administration Home Lab - Personal Project
 
-![Home Lab Logo](/images/homelab-logo.PNG)
+![Home Lab Logo](/images/homelab-logo.png)
 
 Welcome to my comprehensive IT infrastructure project, where I have meticulously designed and implemented a homelab environment integrating Active Directory solutions, both on-premises and in the cloud through Azure Active Directory. This project highlights my proficiency in deploying and managing complex IT systems, utilizing a range of tools and skills to ensure robust operational capabilities.
 
